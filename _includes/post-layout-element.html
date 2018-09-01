@@ -1,9 +1,9 @@
 <div class="{{ class-col }}">
   <div class="{{ class-main }} layout-main">
     {% if element.url %}
-      <a href="{{ element.url }}">
+      <a href="{{ element.url | prepend: site.baseurl | replace: '//', '/' }}">
         <div class="element-photo {{ class-photo }}">
-          <img src="{{site.baseurl}}{{ include.img-src }}/{{ element.img }}" />
+          <img src="{{ include.img-src | prepend: site.baseurl | replace: '//', '/' }}/{{ element.img }}" />
         </div>
 
         <div class="element-title">
@@ -36,7 +36,7 @@
       </a>
     {% else %}
       <div class="element-photo {{ class-photo }}">
-        <img src="{{site.baseurl}}{{ include.img-src }}/{{ element.img }}" />
+        <img src="{{ include.img-src | prepend: site.baseurl | replace: '//', '/' }}/{{ element.img }}" />
       </div>
 
       <div class="element-title">

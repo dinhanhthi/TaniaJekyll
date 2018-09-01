@@ -153,7 +153,7 @@
 
     <script type="text/javascript">
       var Titles = [{% for post in posts %}"{{ post.title }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
-      var Urls = [{% for post in posts %}"{{ post.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+      var Urls = [{% for post in posts %}"{{ post.url | prepend: site.baseurl | replace: '//', '/' }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
       {% if page.subtitle %}
         var Subtitles = [{% for post in posts %}"{{ post.subtitle }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
       {% endif %}

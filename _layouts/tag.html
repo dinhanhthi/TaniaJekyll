@@ -14,7 +14,9 @@ more-css:
         <div class="text">
           Chọn thẻ bạn muốn xem
         </div>
-        {% include tag-list.html %}
+        {% assign tag_src = '/tags/' | append: page.nav %}
+        {% assign tag_src = tag_src | append: '/' %}
+        {% include tag-list.html src=tag_src %}
       </div>
       {% for tag in site.tags %}
         {% for tagData in site.data.tag[page.nav] %}
@@ -24,7 +26,7 @@ more-css:
               <ul class="post-list">
                 {% for post in tag[1] %}
                   <li>
-                    <a href="{{site.baseurl}}{{post.url}}">
+                    <a href="{{post.url | prepend: site.baseurl | replace: '//', '/' }}">
                       {{post.title}}
                       <small>{{post.date | date_to_string}}</small>
                     </a>
