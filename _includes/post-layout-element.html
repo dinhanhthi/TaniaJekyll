@@ -1,7 +1,11 @@
 <div class="{{ class-col }}">
   <div class="{{ class-main }} layout-main">
     {% if element.url %}
+      {% unless element.url contains 'http' %}
       <a href="{{ element.url | prepend: site.baseurl | replace: '//', '/' }}">
+      {% else %}
+      <a href="{{ element.url }}">
+      {% endunless %}
         <div class="element-photo {{ class-photo }}">
           <img src="{{ include.img-src | prepend: site.baseurl | replace: '//', '/' }}/{{ element.img }}" />
         </div>
