@@ -1,0 +1,78 @@
+.alt-quote:nth-child(odd){
+  background-color: #fff3d5;
+}
+
+.quote-content{
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #000;
+  line-height: 1.3;
+  text-align: center;
+  &::before {
+    content: '\f10d  ';
+    font-family: FontAwesome;
+    color: rgba(0, 0, 0, 0.664);
+    /* color: #85b0e5;  */
+    font-size: 18pt;
+  }
+  &::after {
+    content: '  \f10e';
+    font-family: FontAwesome;
+    color: rgba(0, 0, 0, 0.664);
+    font-size: 18pt;
+  }
+}
+.quote-author{
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-align: center;
+  color: #777;
+  a{
+    color: #777;
+    &:hover{
+      text-decoration: none;
+      color: #333;
+    }
+  }
+  span{
+    color: #777;
+  }
+}
+
+.quote-more{
+  font-size: 0.8rem;
+  color: #9e9e9e;
+  text-align: center;
+  a{
+    color: #778899;
+    &:hover{
+      text-decoration: none;
+      color: #444;
+    }
+  }
+}
+
+// post 
+.post-content{
+  &> blockquote p{
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #000;
+    line-height: 1.3;
+    text-align: center;
+    margin: 2rem 0;
+    &::before {
+      content: '\f10d  ';
+      font-family: FontAwesome;
+      color: rgba(0, 0, 0, 0.664);
+      /* color: #85b0e5;  */
+      font-size: 18pt;
+    }
+    &::after {
+      content: '  \f10e';
+      font-family: FontAwesome;
+      color: rgba(0, 0, 0, 0.664);
+      font-size: 18pt;
+    }
+  }
+}

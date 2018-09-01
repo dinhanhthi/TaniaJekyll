@@ -1,0 +1,110 @@
+---
+layout: page
+more-css:
+  - "/css/reading.css"
+  - "/css/thought.css"
+  - "/css/tag-page.css"
+---
+
+{% assign cpage = page.current_page %}
+{% for book in site.categories.reading %}
+  {% assign nbbooks = forloop.length %}
+  {% break %}
+{% endfor %}
+{% assign off_set = cpage | minus: 1 %}
+{% assign off_set = off_set | times: 12 %}
+{% assign nbbooks = nbbooks | times: 1.0 %}
+{% assign total_page = nbbooks | divided_by: 12 %}
+{% assign total_page =  total_page | ceil %}
+
+{% if site.author.ncb != blank %} <!-- if there is a target -->
+  {% assign total_book = site.author.ncb %}
+  {% assign counter = 0 %}
+  {% for post in site.categories.reading %}
+    {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
+      {% if year == "2018" %}
+        {% assign counter = counter | plus: 1 %}
+      {% endif %}
+  {% endfor %}
+  {% if counter > 0 %} <!-- there is some read book -->
+    {% assign read_book = counter %}
+    {% assign counter = counter | times: 100.0 %}
+    {% assign percentage = counter | divided_by: total_book %}
+    {% assign percentage = percentage | ceil  %}
+  {% endif %}
+  <section id="reading-challenge" class="section alt-color">
+    <div class="container">
+      {% include sec-title.html title="Thử thách đọc năm 2018" %}
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="progress" style="height: 40px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning px-3" role="progressbar" aria-valuenow="{{ percentage }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percentage }}%">
+              <span>Đã đọc {{ read_book }} / {{ total_book }} quyển</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sec-more-title mt-4 mb-2 text-center col-12">
+        <h4>
+          những quyển đã hoàn thành
+        </h4>
+        <hr class="mt-1">
+      </div>
+      <div class="row row-eq-height justify-content-center">
+        {% for element in site.categories.reading %}
+          {% capture year %}{{element.date | date: "%Y"}}{% endcapture %}
+          {% if year == "2018" %}
+            {% assign class-col = 'col-6 col-md-4 col-lg-2 p-2' %}
+            {% assign class-main = 'thought-main' %}
+            {% include post-layout-element.html img-src="/img/reading" %}
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="row justify-content-center">
+        <div class="sec-more-title text-center mt-4 mb-2 mx-auto col-12">
+          <h4>
+            Các thẻ trong chủ đề đọc sách
+          </h4>
+          <hr class="mt-1">
+          {% include tag-list.html src="/tags/reading" %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+<!-- read books -->
+<section class="section alt-color reading-layout">
+  <div class="container">
+    {% include sec-title.html title="Tôi giới thiệu" %}
+    {% if total_page > 1 %}
+      <div class="mb-2">
+        {% include pagination.html type="reading" %}
+      </div>
+    {% endif %}
+    <div class="row row-eq-height justify-content-center">
+      {% assign element-source = site.categories.reading %}
+      {% if cpage == 1 %}
+        {% include post-layout.html type="reading" img-src="/img/bookimg" source=element-source offset=0 limit=12 %}
+      {% else %}
+        {% include post-layout.html type="reading" img-src="/img/bookimg" source=element-source offset=off_set limit=12 %}
+      {% endif %}
+    </div>
+    {% if total_page > 1 %}
+      <div class="my-2">
+        {% include pagination.html type="reading" %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- to-read books -->
+<section id="to-read" class="section alt-color">
+  <div class="container">
+    {% include sec-title.html title="Sách sẽ đọc" %}
+    <div class="row row-eq-height justify-content-center">
+      {% assign element-source = site.data.to-read %}
+      {% include post-layout.html type="thought" source=element-source offset=0 %}
+    </div>
+  </div>
+</section>

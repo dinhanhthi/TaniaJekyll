@@ -1,0 +1,65 @@
+<div class="{{ class-col }}">
+  <div class="{{ class-main }} layout-main">
+    {% if element.url %}
+      <a href="{{ element.url }}">
+        <div class="element-photo {{ class-photo }}">
+          <img src="{{site.baseurl}}{{ include.img-src }}/{{ element.img }}" />
+        </div>
+
+        <div class="element-title">
+          {{ element.title }}
+        </div>
+
+        {% if element.subtitle %}
+          <div class="element-subtitle">
+            {{ element.subtitle }}
+          </div>
+        {% endif %}
+
+        {% if element.date %}
+          <div class="element-date">
+            {{ element.date | date_to_string }}
+          </div>
+        {% endif %}
+
+        {% if element.description %}
+          <div class="element-description">
+            {{ element.description }}
+          </div>
+        {% endif %}
+
+        {% if element.rating %}
+          <div class="element-rating">
+            {% include rating.html number=element.rating %}
+          </div>
+        {% endif %}
+      </a>
+    {% else %}
+      <div class="element-photo {{ class-photo }}">
+        <img src="{{site.baseurl}}{{ include.img-src }}/{{ element.img }}" />
+      </div>
+
+      <div class="element-title">
+        {{ element.title }}
+      </div>
+
+      {% if element.subtitle %}
+        <div class="element-subtitle">
+          {{ element.subtitle }}
+        </div>
+      {% endif %}
+
+      {% if element.date %}
+        <div class="element-date">
+          {{ element.date | date_to_string }}
+        </div>
+      {% endif %}
+
+      {% if element.description %}
+        <div class="element-description">
+          {{ element.description }}
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+</div>

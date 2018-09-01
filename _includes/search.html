@@ -1,0 +1,8 @@
+<div class="search-div">
+    <form action="{{ site.baseurl }}/search" method="get">
+        <input class="search-input" type="search" name="q" {% if include.add_id %}id="search-input"{% endif %} placeholder="Gõ từ khóa bạn cần..." autofocus>
+        <button class="search-submit" type="submit">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+    </form>
+</div>

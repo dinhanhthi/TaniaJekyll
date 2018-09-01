@@ -1,0 +1,68 @@
+.book-main{
+  transition: 0.3s;
+  margin-bottom: 20px;
+  border: 1px #ddd solid;
+  background: #fff;
+  a{
+    &:hover .element-subtitle{
+      color: #444;
+    }
+  }
+  .element-rating{
+    margin-bottom: 1rem;
+    margin-top: -5px;
+    text-align: center;
+    .fa-star, .fa-star-o, .fa-star-half-o{
+      color: inherit;
+    }
+  }
+  .element-description{
+    display: none;
+  }
+  .element-date{
+    display: none;
+  }
+  &:hover{
+    .element-photo{
+      background: #dadada;
+    }
+    .element-rating{
+      color: #ff9d00;
+    }
+  }
+  .element-photo{
+    position: relative;
+    background: #ededed;
+    // background-image: linear-gradient(to left bottom, #a4a4a4, #b4b4b4, #c4c4c4, #d4d4d4, #e5e5e5);
+    text-align: center;
+    img{
+      margin: 0 auto;
+      position: relative;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  .element-title{
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 10px 0 5px 0;
+    padding: 0 .5rem;
+  }
+  .element-subtitle{
+    font-size: 0.9rem;
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+    margin: 0 10px 10px 10px;
+  }
+}
+
+.progress-bar span{
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #524834;
+}
+
+.alt-color.reading-layout{
+  background: radial-gradient(circle, rgb(255, 255, 255) 35%, rgb(236, 236, 236) 100%);
+}

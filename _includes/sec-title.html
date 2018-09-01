@@ -1,0 +1,24 @@
+<!--  
+  ** Options:
+    - title: Big title 
+    - more: description below the title 
+    - href: url of the "more" (optional)
+  ** Requirement:
+    Put above code inside a <div class="container">
+-->
+<div class="row justify-content-center">
+  <div class="col-12">
+    <div class="sec-title text-center">
+      <h2>{{ include.title }}</h2>
+      {% if include.more %}
+        <h4 class="sec-more">
+          {% if include.href %}
+            <a href="{{site.baseurl}}{{ include.href }}">{{ include.more }}</a>
+          {% else %}
+            {{ include.more }}
+          {% endif %}
+        </h4>
+      {% endif %}
+    </div>
+  </div>
+</div>

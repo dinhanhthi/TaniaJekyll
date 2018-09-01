@@ -1,0 +1,241 @@
+---
+---
+
+// background
+.bg-reading{
+  background-image: linear-gradient(to right top, #29853e, #28914e, #279d5e, #24aa6e, #20b67f);
+}
+.bg-about{
+  background-image: linear-gradient(to right top, #133b98, #005cb0, #007abf, #0097c6, #13b2c9);
+}
+.bg-thought{
+  background-image: linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
+  background-color: #8c1482;
+}
+.bg-sketch{
+  background-image: linear-gradient(to right top, #ac2e75, #d24469, #ed655b, #fb8c4f, #fdb54b);
+}
+.bg-tutorial{
+  background-image: linear-gradient(to right top, #b1162e, #c62a46, #da3d5e, #ed4f78, #ff6292);
+}
+.bg-default{
+  background-image: linear-gradient(to right top, #133b98, #005cb0, #007abf, #0097c6, #13b2c9);
+}
+
+// common
+.page-post-header{
+  padding: 4rem 0;
+  h1{
+    font-family: 'Baloo', cursive;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+  }
+  h3{
+    color: hsla(0,0%,100%,.9);
+    a{
+      color: hsla(0,0%,100%,.9);
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+// index
+#idx-header{
+  background: linear-gradient(to bottom right,#111217,#484d60);
+  color: hsla(0,0%,100%,.8);
+  padding: 3rem 0 6rem 0;
+
+  position: relative;
+  overflow-x: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 50vw solid white;
+    border-right: 50vw solid white;
+    border-top: 6vw solid transparent;
+  }
+
+}
+.img-avatar{
+  max-width: 200px;
+  margin: 0 auto;
+  img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+  }
+  @media (max-width: 450px){
+    max-width: 150px;
+  }
+}
+.idx-abt{
+  @media screen and (max-width: 768px){
+    margin-top: 2rem;
+  }
+  h1{
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    @media (max-width: 450px){
+      font-size: 3rem;
+    }
+  }
+  a{
+    color: #ffeead;
+    font-size: 1.2rem;
+    font-weight: bold;
+    &:hover{
+      text-decoration: none;
+      color: #fbe17d;
+    }
+    @media screen and (max-width: 400px){
+      font-weight: normal;
+    }
+  }
+  p{
+    font-size: 1.2rem;
+  }
+}
+.idx-social{
+  @media screen and (max-width: 400px){
+    font-size: 1rem;
+  }
+  .mr-s{
+    margin-right: 1.5rem;
+    @media screen and (max-width: 400px){
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.idx-lang{
+  a{
+    margin: 1rem;
+  }
+  img{
+    width: 1.2rem;
+    display: inline-block;
+    margin-top: -2px;
+    margin-right: 2px;
+  }
+}
+
+
+// page
+#page-header{
+
+  position: relative;
+  overflow-x: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 50vw solid white;
+    border-right: 50vw solid white;
+    border-top: 6vw solid transparent;
+  }
+
+  padding: 4rem 0 6rem 0;
+  h1{
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+    @media screen and (max-width: 420px){
+      font-size: 3rem;
+    }
+  }
+  h3{
+    font-size: 1.5rem;
+    @media screen and (max-width: 420px){
+      font-size: 1.3rem;
+    }
+  }
+}
+
+// post
+#post-header{
+  h1{
+    font-family: 'Baloo', cursive;
+    font-size: 3rem;
+    line-height: 1.1;
+    @media screen and (max-width: 420px){
+      font-size: 2.5rem;
+    }
+  }
+
+  h3{
+    font-size: 1.4rem;
+    @media screen and (max-width: 420px){
+      font-size: 1.2rem;
+    }
+  }
+
+  .header-date{
+    color: #e4e4e4;
+    font-size: 1.2rem!important;
+  }
+
+  .header-tuto-img{
+    margin-bottom: 1rem;
+    img{
+      width: 150px;
+    }
+  }
+
+  .rating{
+    font-size: 1.4rem;
+    .fa-star, .fa-star-o, .fa-star-half-o{
+      color: #ffce37;
+    }
+  }
+
+}
+
+// post reading
+.bg-reading{
+  .book-cover{
+    max-width: 150px;
+    margin: 0 auto;
+    @media screen and (max-width: 768px){
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 450px){
+      max-width: 120px;
+    }
+    img{
+      height: 100%;
+      width: 100%;
+      border: 1px solid #aaa;
+      box-shadow: 0 12px 8px -8px black;
+    }
+  }
+  @media screen and (min-width: 960px){
+    h1{
+      font-size: 3.8rem!important;
+    }
+  }
+}
+
+#header-lang{
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 1rem;
+  background: #272a34;
+  a{
+    color: #5eeda3;
+  }
+}

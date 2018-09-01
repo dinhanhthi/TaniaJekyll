@@ -1,0 +1,44 @@
+---
+layout: base
+title: Tìm kiếm
+css:
+  - "/css/search.css"
+---
+
+{% include header.html type="search" %}
+
+<div class="container">
+	<div class="row justify-content-center mt-4 mb-4">
+		<div class="col-12 col-md-10">
+			<p class="result-title">
+				<span id="search-process">Đang tải</span> kết quả <span id="search-query-container" style="display: none;">cho từ khóa "<strong id="search-query"></strong>"</span>
+			</p>
+
+			<ul id="search-results"></ul>
+		</div>
+	</div>
+</div>
+
+<script>
+	window.data = {
+		{% for post in site.posts %}
+			{% if post.title %}
+				{% unless post.excluded_in_search %}
+					{% if added %},{% endif %}
+					{% assign added = false %}
+					"{{ post.url | slugify }}": {
+						"id": "{{ post.url | slugify }}",
+						"title": "{{ post.title | xml_escape }}",
+						"categories": "{{ post.categories | join: ", " | xml_escape }}",
+						"tags": "{{ post.tags | join: ", " | xml_escape }}",
+						"url": " {{ post.url | xml_escape }}",
+						"content": {{ post.content | strip_html | replace_regex: "[\s/\n]+"," " | strip | jsonify }}
+					}
+					{% assign added = true %}
+				{% endunless %}
+			{% endif %}
+		{% endfor %}
+	};
+</script>
+<script src="{{ site.baseurl }}/js/lunr.min.js"></script>
+<script src="{{ site.baseurl }}/js/search.js"></script>

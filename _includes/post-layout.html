@@ -1,0 +1,43 @@
+<!--  
+  ** Options:
+    - type: type of layout whose each post contains: 
+        1. img, 
+        2. title, 
+        3. subtitle,
+        4. date,
+        5. description,
+      + project: 1,2,5
+      + book: 1,2,3 (3 = author)
+      + tutorial: 1,2,4,5
+      + thought: 2,4
+    - source: the source of posts/elements
+    - img-src: source of images
+    - offset: from which the posts are collected
+  ** Requirement:
+    Put above code inside a <div class="container">
+-->
+
+{% assign class-photo = blank %}
+{% assign class-description = blank %}
+{% case include.type %}
+  {% when "project" %}
+    {% assign class-col = 'col-xs-6 col-sm-4 col-md-3 text-center' %}
+    {% assign class-main = 'project-main' %}
+    {% assign class-description = 'project-des' %}
+  {% when "reading" %}
+    {% assign class-col = 'col-xs-6 col-sm-3 px-1 px-md-2' %}
+    {% assign class-main = 'book-main' %}
+    {% assign class-photo = 'p-3 p-md-4 px-lg-5 px-xl-6' %}
+  {% when "thought" %}
+    {% assign class-col = 'col-6 col-md-4 col-lg-2 p-2' %}
+    {% assign class-main = 'thought-main' %}
+  {% when "tutorial" %}
+    {% assign class-main = 'tutorial-main' %}
+    {% assign class-col = 'col-6 col-md-4 col-lg-2 p-2' %}
+    {% assign class-photo = 'px-4 py-3' %}
+    {% assign class-description = 'd-none d-sm-block' %}
+{% endcase %}
+
+{% for element in include.source offset: include.offset limit: include.limit %}
+  {% include post-layout-element.html %}
+{% endfor %}

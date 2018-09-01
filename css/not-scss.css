@@ -1,0 +1,14 @@
+---
+---
+
+{% for nav in site.data.nav %}
+  .bg-{{ nav.name }}{
+    background-image: linear-gradient(160deg,#{{ nav.color }},#06060669);
+    background-color: #{{ nav.color }};
+  }
+{% endfor %}
+
+.bg-default{
+  background-image: linear-gradient(160deg,#3292f6,#06060669);
+  background-color: #3292f6;
+}

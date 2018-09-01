@@ -1,0 +1,125 @@
+---
+layout: page
+title: Đinh Anh Thi
+subtitle: toán, lập trình, viết lách và tự học
+nav: about
+css:
+  - "/css/contact-form.css"
+  - "/css/post-layout.css"
+  - "/css/page.css"
+  - "/css/not-scss.css"
+js:
+  - "/js/contact-form.js"
+permalink: /about
+---
+
+<section class="section about-intro alt-color">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-7 col-md-9 text-center">
+        <p>
+          Khởi điểm là một nhà toán học bán chuyên, đầy tò mò và đam mê công nghệ, tôi có sở thích mãnh liệt trong việc chia sẻ về <strong>toán ứng dụng</strong>, <strong>khoa học máy tính</strong> và những <strong>công cụ số bổ ích</strong> cho cuộc sống con người. Với tôi, việc tìm ra cách truyền đạt dễ hiểu và trực quan một vấn đề cũng quan trọng như việc hiểu rõ vấn đề đó vậy. Đó là lý do vì sao tôi lập ra <a href="{{ site.baseurl }}/sketch">Math2IT</a>. Ngoài ra tôi cũng rất thích nấu ăn, <a href="{{ site.baseurl }}/sketch">vẽ</a>, <a href="/reading">đọc sách</a> và <a href="{{ site.baseurl }}/tags/thought#travel">đi du lịch</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section my-4 alt-color">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12 col-md-8 text-center">
+        <p style="font-size: 1.3rem;">
+          Tôi tin rằng Internet là một nguồn dữ liệu cực hiệu quả và đầy sức mạnh cho chúng ta tự học mọi thứ. Tôi biết rằng việc có được những cách tiếp cận nhanh và <strong>tìm được những nguồn tài liệu chất lượng sẽ quyết định hiệu quả của quá trình tự học</strong>. Đó là những gì tôi sẽ chia sẻ ở trang web này. Tất cả đều <strong>miễn phí</strong> và hoàn toàn <strong>phi lợi nhuận</strong>.
+        </p>
+        <p style="font-size: 1.5rem;">
+          <a href="https://www.paypal.me/DinhAnhThi">
+            <strong>[ Giúp Thi ]</strong>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- self learning -->
+{% assign img-src = '/img/about/' %}
+<section class="section alt-color">
+  <div class="container">
+    {% include sec-title.html title="Con đường tự học" more="\"Thay đổi là kết quả cuối cùng của quá trình học tập nghiêm túc.\"" %}
+    {% for field in site.data.learning-field %}
+      {% capture left-right %}
+        {% cycle 'left', 'right' %}
+      {% endcapture %}
+      {% capture bleft-bright %}
+        {% cycle 'bleft', 'bright' %}
+      {% endcapture %}
+      <div class="row justify-content-center align-items-center my-learning">
+        <div class="col-md-2 d-none d-md-block field-img {{ left-right }}">
+          <img src="{{ site.baseurl }}{{ img-src }}{{ field.img }}">
+        </div>
+        <div class="col-12 col-md-10">
+          <h3 class="subject {{ left-right }}">
+            <img class="d-md-none" src="{{ site.baseurl }}{{ img-src }}{{ field.img }}">
+            <span style="color: {{ field.color  }}; border-color: {{ field.color  }}">{{ field.title }}</span>
+          </h3>
+          <div class="intro {{ left-right }}">{{ field.abstract }}</div>
+          <div class="content">
+            <div class="collapsed buttonD {{ left-right }}" data-toggle="collapse" href="#{{ field.title | slugify }}"><span>Chi tiết hơn</span></div>
+            <ul id="{{ field.title | slugify }}"  class="collapse multi-collapse {{ left-right }}">
+              {% for item in field.detail %}
+                <li>
+                  <span class="year">{{ item.date }}</span> :
+                  <span class="activity">{{ item.activity }}</span>
+                  {% if item.more %}
+                    <div class="more">
+                      {{ item.more }}
+                      {% if item.link %}
+                        <a href="{{ item.link }}">
+                          {% if item.link-des %}
+                            ({{ item.link-des }})
+                          {% else %}
+                            (Link tham khảo)
+                          {% endif %}
+                        </a>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-2 d-none d-md-block field-img {{ bleft-bright }}">
+          <img src="{{ site.baseurl }}{{ img-src }}{{ field.img }}">
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+
+<!-- more info -->
+<section class="section alt-color">
+  <div class="container">
+    {% include sec-title.html title="Thông tin thêm" %}
+    <div class="row align-items-center justify-content-center">
+      <div class="col-12 col-md-8">
+        <ul>
+          <li><b>Nơi ở hiện tại</b> : Pontoise, Pháp.</li>
+          <li><b>Công việc hiện tại</b> : Nghiên cứu sinh (tại trường Paris 13, Pháp) và Quản lý <a href="{{ site.baseurl }}/project/ma2thit">Math2IT</a></li>
+          <li><b>Đang tự học</b> : Python, Data Science và Machine Learning cơ bản.
+          <li><b>Sách đang đọc</b> : Chú bé mang pyjama sọc (John Boyne).
+          <li><b>Email</b> : <a href="mailto:dinhanhthimail@gmail.com">dinhanhthimail@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- contact -->
+<section class="section alt-color">
+  {% include sec-form-contact.html %}
+</section>

@@ -1,0 +1,104 @@
+<div class="tpagination">
+  {% if total_page > 5 %}
+    {% assign ttpmo = total_page | minus: 1 %}
+    {% case cpage %}
+      {% when 1 %}
+        <a class="page-element disable arrw" href="#" tabindex="-1"><i class="fa fa-angle-left"></i></a>
+        <a class="page-element active" href="{{site.baseurl}}/{{ include.type }}">1</a>
+        <a class="page-element" href="{{site.baseurl}}/{{ include.type }}/page-2">2</a>
+        <span><i class="fa fa-ellipsis-h"></i></span>
+        <a class="page-element" href="{{site.baseurl}}/{{ include.type }}/page-{{ total_page }}">{{ total_page }}</a>
+        <a class="page-element arrw" href="{{site.baseurl}}/{{ include.type }}/page-2"><i class="fa fa-angle-right"></i></a>
+      {% when 2 %}
+        <a class="page-element arrw" href="{{site.baseurl}}/{{ include.type }}" tabindex="-1"><i class="fa fa-angle-left"></i></a>
+        <a class="page-element" href="{{site.baseurl}}/{{ include.type }}">1</a>
+        <a class="page-element active" href="{{site.baseurl}}/{{ include.type }}/page-2">2</a>
+        <span><i class="fa fa-ellipsis-h"></i></span>
+        <a class="page-element" href="{{site.baseurl}}/{{ include.type }}/page-{{ total_page }}">{{ total_page }}</a>
+        <a class="page-element arrw" href="{{site.baseurl}}/{{ include.type }}/page-3"><i class="fa fa-angle-right"></i></a>
+      {% when ttpmo %}
+        <a class="page-element arrw" href="{{site.baseurl}}/{{ include.type }}/page-{{ ttpmo }}" tabindex="-1"><i class="fa fa-angle-left"></i></a>
+        <a class="page-element" href="{{site.baseurl}}/{{ include.type }}">1</a>
+        <span><i class="fa fa-ellipsis-h"></i></span>
+        <a class="page-element active" href="{{site.baseurl}}/{{ include.type }}/page-{{ ttpmo }}">{{ ttpmo }}</a>
+        <a class="page-element" href="{{site.baseurl}}/{{ include.type }}/page-{{ total_page }}">{{ total_page }}</a>
+        <a class="page-element arrw" href="{{site.baseurl}}/{{ include.type }}/page-{{ total_page }}"><i class="fa fa-angle-right"></i></a>
+      {% when total_page %}
+        <a class="page-element arrw" href="{{site.baseurl}}/{{ include.type }}/page-{{ ttpmo }}" tabindex="-1"><i class="fa fa-angle-left"></i></a>
+        <a class="page-element" href="{{site.baseurl}}/{{ include.type }}">1</a>
+        <span><i class="fa fa-ellipsis-h"></i></span>
+        <a class="page-element" href="{{site.baseurl}}/{{ include.type }}/page-{{ ttpmo }}">{{ ttpmo }}</a>
+        <a class="page-element active" href="{{site.baseurl}}/{{ include.type }}/page-{{ total_page }}">{{ total_page }}</a>
+        <a class="page-element disable arrw" href="#"><i class="fa fa-angle-right"></i></a>
+      {% else %}
+        {% assign cpmo = cpage | minus: 1 %}
+        {% assign cppo = cpage | plus: 1 %}
+        <a class="page-element arrw" href="{{site.baseurl}}/{{ include.type }}/page-{{ cpmo }}" tabindex="-1"><i class="fa fa-angle-left"></i></a>
+        <a class="page-element" href="{{site.baseurl}}/{{ include.type }}">1</a>
+        <span><i class="fa fa-ellipsis-h"></i></span>
+        <span class="page-element active">{{ cpage }}</span>
+        <span><i class="fa fa-ellipsis-h"></i></span>
+        <a class="page-element" href="{{site.baseurl}}/{{ include.type }}/page-{{ total_page }}">{{ total_page }}</a>
+        <a class="page-element arrw" href="{{site.baseurl}}/{{ include.type }}/page-{{ cppo }}"><i class="fa fa-angle-right"></i></a>
+    {% endcase %}
+  {% else %} <!-- total_page <= 5 -->
+    {% case total_page %}
+      {% when 1 %}
+        <a class="page-element disable arrw" href="" tabindex="-1"><i class="fa fa-angle-left"></i></a>
+        <span class="page-element active">1</span>
+        <a class="page-element disable arrw" href="#"><i class="fa fa-angle-right"></i></a>
+      {% when 2 %}
+        {% if cpage == 1 %}
+          <a class="page-element disable arrw" href="#" tabindex="-1"><i class="fa fa-angle-left"></i></a>
+          <span class="page-element active">1</span>
+          <a class="page-element" href="{{site.baseurl}}/{{ include.type }}/page-2">2</a>
+          <a class="page-element arrw" href="{{site.baseurl}}/{{ include.type }}/page-2"><i class="fa fa-angle-right"></i></a>
+        {% else %}
+          <a class="page-element arrw" href="{{site.baseurl}}/{{ include.type }}" tabindex="-1"><i class="fa fa-angle-left"></i></a>
+          <a class="page-element" href="{{site.baseurl}}/{{ include.type }}">1</a>
+          <span class="page-element active">2</span>
+          <a class="page-element disable arrw" href="#"><i class="fa fa-angle-right"></i></a>
+        {% endif %}
+      {% else %}
+        {% case cpage %}
+          {% when 1 %}
+            <a class="page-element disable arrw" href="#" tabindex="-1"><i class="fa fa-angle-left"></i></a>
+            <span class="page-element active">1</span>
+            {% for i in (2..total_page) %}
+              <a class="page-element" href="{{site.baseurl}}/{{ include.type }}/page-{{ i }}">{{ i }}</a>
+            {% endfor %}
+            <a class="page-element arrw" href="{{site.baseurl}}/{{ include.type }}/page-2"><i class="fa fa-angle-right"></i></a>
+          {% when 2 %}
+            <a class="page-element arrw" href="{{site.baseurl}}/{{ include.type }}" tabindex="-1"><i class="fa fa-angle-left"></i></a>
+            <a class="page-element" href="{{site.baseurl}}/{{ include.type }}">1</a>
+            <span class="page-element active">2</span>
+            {% for i in (3..total_page) %}
+              <a class="page-element" href="{{site.baseurl}}/{{ include.type }}/page-{{ i }}">{{ i }}</a>
+            {% endfor %}
+            <a class="page-element arrw" href="{{site.baseurl}}/{{ include.type }}/page-3"><i class="fa fa-angle-right"></i></a>
+          {% when total_page %}
+            {% assign ttpmo = total_page | minus: 1 %}
+            <a class="page-element arrw" href="{{site.baseurl}}/{{ include.type }}/page-{{ ttpmo }}" tabindex="-1"><i class="fa fa-angle-left"></i></a>
+            <a class="page-element" href="{{site.baseurl}}/{{ include.type }}">1</a>
+            {% for i in (2..ttpmo) %}
+              <a class="page-element" href="{{site.baseurl}}/{{ include.type }}/page-{{ i }}">{{ i }}</a>
+            {% endfor %}
+            <span class="page-element active">{{ total_page }}</span>
+            <a class="page-element disable arrw" href="#"><i class="fa fa-angle-right"></i></a>
+          {% else %}
+            {% assign cpmo = cpage | minus: 1 %}
+            {% assign cppo = cpage | plus: 1 %}
+            <a class="page-element arrw" href="{{site.baseurl}}/{{ include.type }}/page-{{ cpmo }}" tabindex="-1"><i class="fa fa-angle-left"></i></a>
+            <a class="page-element" href="{{site.baseurl}}/{{ include.type }}">1</a>
+            {% for i in (2..cpmo) %}
+              <a class="page-element" href="{{site.baseurl}}/{{ include.type }}/page-{{ i }}">{{ i }}</a>
+            {% endfor %}
+            <span class="page-element active">{{ cpage }}</span>
+            {% for i in (cppo..total_page) %}
+              <a class="page-element" href="{{site.baseurl}}/{{ include.type }}/page-{{ i }}">{{ i }}</a>
+            {% endfor %}
+            <a class="page-element arrw" href="{{site.baseurl}}/{{ include.type }}/page-{{ cppo }}"><i class="fa fa-angle-right"></i></a>
+        {% endcase %}
+    {% endcase %}
+  {% endif %}
+</div>

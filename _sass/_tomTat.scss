@@ -1,0 +1,59 @@
+.tomTat{
+  margin: 2rem 0;
+  border: 1px solid #ddd;
+  padding: 1rem 2rem 1rem 1rem;
+  background: #f1f1f194;
+  // border-radius: 5px;
+}
+
+#btTomTat{
+  color: #0071e6;
+  padding: 0 2rem 2px 0;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1.2rem;
+
+  &::before{
+    display: inline-block;
+    content: ' ';
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid currentColor;
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+    transition: transform .2s ease-out;
+  }
+
+  &.collapsed::before {
+    transform: rotate(-90deg) translateX(3px);
+  }
+
+  &:hover{
+    color: #0085A1;
+  }
+}
+
+#ndTomTat, .ndTomTat{
+  padding: 1.25rem 0 0 1.25rem;
+  margin-left: 6px;
+  margin-top: -10px;
+
+  blockquote p:before{
+    font-family: FontAwesome;
+    content: "\f101";
+    color: #037aff;
+    margin-right: 0.5rem;
+  }
+
+  blockquote:last-child{
+    margin-bottom: 0;
+    p{
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  h2:first-child, h3:first-child{
+    margin-top: 1rem!important;
+  }
+}

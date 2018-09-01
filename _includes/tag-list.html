@@ -1,0 +1,14 @@
+<div class="tag-list">
+  {% for tag in site.tags %}
+    {% for tagData in site.data.tag[page.nav] %}
+      {% if tag[0] == tagData %}
+        {% capture test %}{{tag[0] | slice: 0}}{% endcapture %}
+        {% capture testup %}{{tag[0] | slice: 0 | upcase}}{% endcapture %}
+        <a class="tag-chip" id="tag-{{tag[0] | slugify}}{% if test == testup %}_cap{% endif %}" href="{{ site.baseurl }}{{ include.src }}#{{tag[0] | slugify}}{% if test == testup %}_cap{% endif %}">
+          <i class="fa fa-tag"></i>
+          {{tag[0]}}
+        </a>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</div>

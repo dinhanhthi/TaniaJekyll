@@ -1,0 +1,46 @@
+title: TaniaJekyll
+description: Beautiful personal Jekyll theme
+baseurl: "TaniaJekyll" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# author's info, important for displaying info on site
+author:
+  name: TaniaJekyll
+  github: dinhanhthi
+  facebook: math2it
+  email: dinhanhthimail@gmail.com
+  avatar: /img/user.png
+  ncb: 10 # number of challenge books
+
+lang:
+  current: en
+  other_url: http://vn.dinhanhthi.com
+
+
+title-separator: "-"
+
+disqus: this-site
+
+# Build settings
+timezone: "Europe/Paris"
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
+permalink: /:categories/:title
+# paginate: 24
+# paginate_path: "/thought/page-:num"
+
+# Facebook App ID
+# fb_app_id: ""
+
+sass:
+  style: compact
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - CNAME
+
+plugins:
+  - jekyll-feed

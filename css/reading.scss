@@ -1,0 +1,20 @@
+---
+---
+
+
+#reading-challenge{
+  .element-date{
+    display: none;
+  }
+  .element-subtitle a{
+    pointer-events: none;
+  }
+}
+#to-read .element-title a{
+  pointer-events: none;
+}
+
+@import 'layout-general'; // _layout-general.scss
+@import 'layout-reading'; // _layout-reading.scss
+@import 'layout-thought'; // _layout-thought.scss
+

@@ -1,0 +1,35 @@
+<!-- field learning -->
+
+{% assign img-box = 'col-12 col-md-2 col-sm-3 img-order' %}
+{% assign img-src = '/img/about' %}
+{% assign content-box = 'col-12 col-md-9 col-sm-8 content-box' %}
+
+<section class="section my-learning alt-color">
+  <div class="container">
+    {% include sec-title.html title="Con đường tự học" more="\"Thay đổi là kết quả cuối cùng của quá trình học tập nghiêm túc.\"" %}
+      {% for field in site.data.learning-field %}
+        {% capture field-learning-class %}{% cycle 'field-learning left row align-items-center justify-content-center', 'field-learning right row align-items-center justify-content-center' %}{% endcapture %}
+        <div class="{{ field-learning-class }}">
+          <div class="{{ img-box }}">
+            <div class="img-box">
+              <img src="{{ img-src }}/{{ field.img }}">
+            </div>
+          </div>
+          <div class="link"></div>
+          <div class="{{ content-box }}">
+            <h3>{{ field.title }}</h3>
+            <p>{{ field.abstract }}</p>
+            <div class="detail">
+              <div class="collapsed buttonD" data-toggle="collapse" href="#{{ field.title | slugify }}"><span>Chi tiết hơn</span></div>
+              <div id="{{ field.title | slugify }}"  class="collapse multi-collapse contentD">
+                {% for item in field.detail %}
+                  <blockquote><p>{{ item }}</p></blockquote>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+  </div>
+</section>
+

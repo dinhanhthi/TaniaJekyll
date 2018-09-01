@@ -1,0 +1,37 @@
+---
+base-css:
+  - "/css/bootstrap41/bootstrap.min.css"
+  - "/css/main.css"
+  - "/css/header.css"
+  - "/css/page.css"
+  - "/css/rouge-monokai.css"
+base-ext-css:
+  - "//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"
+base-googlefonts:
+  - "Open+Sans: 400,400i,600,600i,700,700i,800&amp;subset=vietnamese"
+  - "Lobster&amp;subset=vietnamese"
+  - "Nunito: 400,600,700&amp;subset=vietnamese"
+  - "Baloo"
+base-js:
+  - "/js/bootstrap41/jquery-3.3.1.slim.min.js"
+  - "/js/bootstrap41/popper.min.js"
+  - "/js/bootstrap41/bootstrap.min.js"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+  <header>
+    {% include nav.html %}
+  </header>
+  
+  {{ content }}
+
+  <footer class="footer">
+    {% include footer.html %}
+  </footer>
+
+  {% include footer-scripts.html %}
+</body>
+</html>

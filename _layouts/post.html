@@ -1,0 +1,50 @@
+---
+layout: base
+more-css:
+  - "/css/post.css"
+  - "/css/post-layout.css"
+  - "/css/tag-page.css"
+more-js:
+  - "/js/backtotop.js"
+---
+
+{% case page.header %}
+  {% when 'reading' %}
+    {% include header.html type="reading" %}
+  {% else %}
+    {% include header.html type="post" %}
+{% endcase %}
+
+<div  class="container post-container">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-12">
+      <div class="post-content mb-4">
+        {{ content }}
+      </div>
+      <div class="tag-list text-center">
+        {% for tag in page.tags %}
+          {% capture test %}{{tag | slice: 0}}{% endcapture %}
+          {% capture testup %}{{tag | slice: 0 | upcase}}{% endcapture %}
+          <a class="tag-chip" href="{{site.baseurl}}/tags/{{ page.categories[0] }}#{{ tag | slugify }}{% if test == testup %}_cap{% endif %}">
+            <i class="fa fa-tag"></i>
+            {{ tag }}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="my-4">
+    {% include more-posts.html %}
+  </div>
+
+  {% unless page.comment %}
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-12 my-4">
+      <div class="disqus-comments">
+        {% include disqus.html %}
+      </div>
+    </div>
+  </div>
+  {% endunless %}
+</div>

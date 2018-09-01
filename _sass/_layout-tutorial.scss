@@ -1,0 +1,49 @@
+.alt-color:nth-child(even) .tutorial-main{
+  background-color: #fff;
+  border: #ddd solid 1px;
+}
+.tutorial-main{
+  background: #f9f9f9;
+  border: #ddd solid 1px;
+  border-radius: 7px;
+  transition: transform .2s;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  &:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 6px 4px #e3e3e3;
+    .element-title{
+      color: #0085A1;
+    }
+    .element-date{
+      color: #666;
+    }
+    .element-description{
+      color: #333;
+    }
+  }
+  .element-photo img{
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+  }
+  .element-title{
+    font-size: 1.1rem;
+  }
+  .element-date{
+    margin-top: 5px;
+    font-size: 0.75rem;
+    color: #888;
+    font-weight: 600;
+  }
+  .element-description{
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  .element-subtitle{
+    display: none;
+  }
+}
+

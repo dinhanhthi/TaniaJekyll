@@ -1,0 +1,33 @@
+<nav class="navbar navbar-dark nav-bg navbar-custom">
+  <div class="container">
+    {% assign navs = site.data.nav %}
+    {% for nav in navs %}
+      {% if nav.name == page.nav %}
+        {% assign cClass = 'nav-current' %}
+      {% else %}
+        {% assign cClass = nil %}
+      {% endif %}
+      <a class="nav-{{ nav.name }} {{ cClass }}" href="{{site.baseurl}}{{ nav.url }}">
+        <i class="fa {{ nav.icon }}" aria-hidden="true"></i>
+        <span>{{ nav.title }}</span>
+      </a>
+    {% endfor %}
+    <div class="nav-search">
+        <form action="{{ site.baseurl }}/search" method="get">
+          <input name="q" class="mr-sm-2 nav-search-input" type="search" placeholder="Tìm kiếm" aria-label="Tìm kiếm">
+          <button class="nav-search-submit" type="submit">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+      <div class="nav-lang">
+        {% if site.lang.current == 'en' %}
+          <span class="en active">en</span>
+          <a href="{{ site.lang.other_url }}" class="vn">vn</a>
+        {% else %}
+          <a href="{{ site.lang.other_url }}" class="en">en</a>
+          <span class="vn active">vn</span>
+        {% endif %}
+      </div>
+  </div>
+</nav>

@@ -1,0 +1,117 @@
+- img: math-icon.svg
+  color: "#9331CC"
+  title: Học Toán
+  abstract: Toán học là nền tảng của khoa học tự nhiên. Tôi học toán từ nhỏ cho đến hiện tại. Với tôi, việc hiểu và diễn đạt toán học một cách trực quan, có tính ứng dụng cao là điều quan trọng nhất.
+  detail:
+    - date: 2005 - 2008
+      activity: Chuyên Toán trường THPT Chuyên Bến Tre.
+      more: Tôi được học về Toán ở cấp độ cao hơn chương trình bình thường.
+    - date: 2008 - 2012
+      activity: Cử nhân Toán trường Đại Học Sư Phạm TP. HCM.
+      more: "Tôi được đào tạo để trở thành một giáo viên toán tại trường THPT: học cách trình bày, diễn đạt và gỉang dạy Toán cho người khác."
+    - date: 2012 - 2014
+      activity: Thạc sĩ Toán ứng dụng chương trình liên kết Pháp-Việt.
+      more: Tôi học 6 môn toán ứng dụng thuộc giải tích số, thống kê, tối ưu hóa.
+    - date: 2014 - 2018
+      activity: Nghiên cứu sinh Toán ứng dụng chuyên ngành Giải tích số tại trường Paris 13, Pháp.
+      more: Tôi được tiếp cận quá trình nghiên cứu toán ứng dụng tại Pháp. Tôi tìm cách ứng dụng toán vào sinh học, mô phỏng sự phát triển của màng tế bào (biofilm) bằng một mô hình toán học sử dụng phương pháp số.
+- img: coding-icon.svg
+  color: "#1ca51a"
+  title: Học lập trình
+  abstract: "Song song với Toán, tôi tiếp cận với lập trình và theo đuổi bằng con đường tự học."
+  detail:
+    - date: 2005 - 2008
+      activity: Tư duy lập trình, ngôn ngữ Pascal.
+    - date: 2008 - 2012
+      activity: Học C++, Maple, VBA, lập trình web, ứng dụng CNTT trong giảng dạy và giáo dục.
+      more: Tôi bắt đầu nhận ra sự hiệu quả và cần thiết của tư duy và kiến thức Toán học trong lập trình ứng dụng.
+    - date: 2012
+      activity: Luận văn tốt nghiệp cử nhân bằng ứng dụng dạy học từ xa viết trên nền web.
+      more: Tạo ra ứng dụng online hỗ trợ giáo viên và học sinh có thể tham gia một buổi học từ xa với đầy đủ chức năng livestream, đăng nhập, tương tác như một lớp học bình thường.
+    - date: 2012 - 2014
+      activity: Lập trình ứng dụng trong giải tích số, toán ứng dụng với Matlab, R.
+      more: Tôi bắt đầu học Matlab và R, ứng dụng vào giải các mô hình toán học cơ bản bằng phương pháp số (Finite Different Method và Finite Volume Method).
+    - date: 2013 - nay
+      activity: Học lập trình và thiết kế website
+      more: Tôi bắt đầu dự án Màth2IT, ban đầu với Blogger, sau đó chuyển sang Wordpress và bây giờ kết hợp với Jekyll.
+    - date: 2014-2018
+      activity: Lập trình ứng dụng với FreeFem++, Matlab.
+      more: Tôi học và sử dụng chuyên sâu FreeFem++ và Matlab trong việc giải quyết bài toán mô hình phát triển của màng tế bào.
+    - date: 2017 - nay
+      activity: Python và Khoa học dữ liệu
+      more: Tôi tự học về Python và có ý định chuyển hướng sang con đường khoa học dữ liệu (Data Science).
+- img: phd-icon.svg
+  color: "#f35d00"
+  title: Nghiên cứu sinh
+  abstract: Tôi nhận được học bổng nghiên cứu sinh tiến sĩ tại trường đại học Paris XIII, Pháp. Tại đây, tôi tìm cách ứng dụng toán vào sinh học, mô phỏng sự phát triển của màng tế bào (biofilm) bằng một mô hình toán học sử dụng phương pháp phân tích phần tử hữu hạn (Finite Element method).
+  detail:
+    - date: 10 - 13/06/2014
+      activity: "Tham gia trường hè \"Models for bacterial biofilms formation : mathematical, physical and biological perspectives\" tại Nice, Pháp."
+      more: Tôi có cơ hội được gặp rất nhiều chuyên gia trong lĩnh vực đang nghiên cứu (về biofilm) cũng như giao lưu và học hỏi rất nhiều từ họ.
+      link: http://math.unice.fr/~ribot/Biofilms/registration.php
+      link-des: Trang web chương trình
+    - date: 7 - 11/07/2014
+      activity: Tham gia trường hè sinh học tại Luminy, Marseille, Pháp.
+      more: Tôi được học về sinh học nói chung từ cơ bản nhất, điều này giúp ích rất nhiều cho tôi trong nghiên cứu.
+      link: http://www.i2m.univ-amu.fr/florence.hubert/?q=EÈBL014
+      link-des: Trang web chương trình
+    - date: 13 - 17/10/2014
+      activity: Tham gia tuần lễ "Toán học và doanh nghiệp" lần thứ 11 tại Rouen, Pháp.
+      more: Tại đây, tôi tham gia vào một dự án nhỏ do Viện dầu khí Pháp đưa ra (IFPEN). Trong vòng 1 tuần lễ, chúng tôi phải tiếp cận vấn đề, tìm cách giải quyết và đưa ra lời giải cho nó. Đây là tuần lễ giúp tôi rất nhiều trong việc thấy được ứng dụng của nghiên cứu Toán học vào trong thực tiễn.
+      link: http://lmrs.univ-rouen.fr/SEME/
+      link-des: Trang web chương trình
+    - date: 12 - 13/10/2015
+      activity: "Tham gia workshop \"Workshop sur la modélisation de biofilms\" tại Rouen, Pháp."
+      more: "Tôi có bài báo cáo tên \"Simulation de la croissance d’un biofilm\""
+      link: http://lmrs.univ-rouen.fr/Biofilms/intervenants.html
+      link-des: Trang web workshop
+    - date: 15 - 16/12/2015
+      activity: "Tham gia workshop \"Seventh Workshop on Generic Solvers for PDEs: FreeFem++ and its Applications\" tại trường Paris VI, Pháp."
+      more: "Tôi có bài nói \"Simulating some interface problems with FreeFem++\"."
+      link: https://www.ljll.math.upmc.fr/hecht/ftp/ff++days/2015/Schedule.html
+      link-des: Trang web workshop
+    - date: 25/01/2016
+      activity: "Tham gia cuộc họp mặt lần thứ 3 về Toán, Sinh và Y tế của trường Sorbone Paris tại trường Paris XIII."
+      more: "Tôi có bài nói \"Finite element approximation of the biofilm growth model\"."
+      link: http://mathbio2016spc.sciencesconf.org/
+      link-des: Trang web chương trình
+    - date: 11 - 16/12/2016
+      activity: Tham dự hội nghị kỷ niệm 10 năm chương trình Thạc sĩ toán ứng dụng Pháp-Việt tại Quy Nhơn, Bình Định, Việt Nam.
+      more: Đây là dịp để các sinh viên đã đang và sẽ học trong chương trình có dịp hội ngộ, giao lưu và trao đổi về học thuật và con đường đi sắp tới với nhau, cũng như với các thầy cô trong ban quản lý chương trình.
+      link: https://indico.math.cnrs.fr/event/1301/overview
+      link-des: Trang web chương trình
+- img: web-dev-icon.svg
+  color: "#008b8b"
+  title: Lập trình web
+  abstract: Tôi có hứng thú đặc biệt với lập trình và thiết kế web kể từ đề tài luận văn tốt nghiệp cử nhân sư phạm.
+  detail:
+    - date: 2012
+      activity: Tự học về HTML & CSS, DOM, Javascript & Ajax, PHP & MySQL, HTTP Live Streaming.
+      more: Tôi có cơ hội học được trọn vẹn ngôn ngữ thiết kế và lập trình web dựa trên nhu cầu ứng dụng thực tế là xây dựng một hệ thống giảng dạy trực tuyến cho giáo viên và học sinh.
+      link: /files/dayhoctuxa.pdf
+      link-des: Luận văn của tôi
+    - date: 2013 - 2014
+      activity: Blogger.
+      more: "Tôi bắt đầu dự án Math2IT bằng Blogger."
+      link: /project/math2it
+      link-des: Trang web dự án
+    - date: 2014 - nay
+      activity: Wordpress & Jekyll.
+      more: Math2IT được viết lại bằng Wordpress. Tôi cũng bắt đầu tìm hiểu và viết web dựa trên Jekyll. Trang web Tôi Tự Học cũng ra đời từ đó.
+      link: /project/toi-tu-hoc
+      link-des: Dự án Tôi Tự Học
+- img: data-icon.svg
+  color: "#ed143d"
+  title: Khoa học dữ liệu
+  abstract: Tôi tự học về Machine Learning và Data Science từ nền tảng toán và lập trình của mình.
+  detail:
+    - date: 2017 - nay
+      activity: Tự học Python.
+      more: Tôi hoàn thành courses CS50 về Khoa học máy tính, Python trên Datacamp, video bài giảng của Corey Schafer và vẫn đang tiếp tục học nâng cao hơn.
+      link: https://note.dinhanhthi.com/tags#python
+      link-des: Note của tôi
+    - date: 2018 - nay
+      activity: Bắt đầu học Data Scinece cơ bản.
+      more: Tôi đã hoàn thành học course về Machine Learning trên Udemy, làm dự án Titanic trên Kaggle cũng như course về Data trên Datacamp và Codecademy.
+      link: https://note.dinhanhthi.com/categories#data
+      link-des: Note của tôi
