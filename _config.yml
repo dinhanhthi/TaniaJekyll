@@ -1,11 +1,11 @@
-title: Tania-Jekyll
+title: TaniaJekyll
 description: Beautiful personal Jekyll theme
-baseurl: "/Tania-Jekyll" # the subpath of your site, e.g. /blog
+baseurl: "/TaniaJekyll" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # author's info, important for displaying info on site
 author:
-  name: Tania-Jekyll
+  name: TaniaJekyll
   github: dinhanhthi
   facebook: math2it
   email: dinhanhthimail@gmail.com
