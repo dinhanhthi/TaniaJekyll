@@ -1,6 +1,6 @@
 ---
 layout: base
-title: TaniaJekyll
+title: Tania-Jekyll
 subtitle: A beautiful personal Jekyll theme
 nav: home
 lang: en
@@ -63,7 +63,7 @@ js:
 <!-- projects -->
 <section id="idx-project" class="alt-color section">
   <div class="container mb-4">
-    {% include sec-title.html title="Recent projects" href="project" more="xem tất cả" %}
+    {% include sec-title.html title="Recent projects" href="/project" more="xem tất cả" %}
     <div class="row justify-content-center">
       {% assign element-source = site.data.project %}
       {% include post-layout.html type="project" img-src="/img/project" source=element-source offset=0 limit=4 %}
@@ -110,7 +110,7 @@ js:
 <!-- sketch -->
 <section id="idx-sketch" class="alt-color section">
   <div class="container mb-5">
-    {% include sec-title.html title="Latest sketches" href="/sketch" more="see all photos" %}
+    {% include sec-title.html title="Latest photos" href="/sketch" more="see all photos" %}
     <div class="row justify-content-center">
       {% include sketch.html offset=0 limit=8 %}
     </div>
