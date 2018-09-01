@@ -76,7 +76,7 @@ layout: null
 			searchProcessEl.innerText = "Hiển thị";
 		} else {
 			searchResultsEl.style.display = "none";
-			searchProcessEl.innerText = "Không có";
+			searchProcessEl.innerText = "No result ";
 		}
 	}
 

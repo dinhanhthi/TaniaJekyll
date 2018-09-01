@@ -1,9 +1,9 @@
 ---
 layout: base
-title: Đinh Anh Thi
-subtitle: Thành công là kết quả của quá trình tự học bền bỉ
+title: TaniaJekyll
+subtitle: A beautiful personal Jekyll theme
 nav: home
-lang: vn
+lang: en
 css:
   - "/css/index.css"
   - "/css/sketch.css"
@@ -53,7 +53,7 @@ js:
           }
         </script>
         <p class="quote-more">
-          (<a href="{{site.baseurl}}/quote">xem những câu nói hay khác</a>)
+          (<a href="{{site.baseurl}}/quote">see all favorite quotes</a>)
         </p>
       </div>
     </div>
@@ -63,7 +63,7 @@ js:
 <!-- projects -->
 <section id="idx-project" class="alt-color section">
   <div class="container mb-4">
-    {% include sec-title.html title="Dự án gần đây" href="project" more="xem tất cả" %}
+    {% include sec-title.html title="Recent projects" href="project" more="xem tất cả" %}
     <div class="row justify-content-center">
       {% assign element-source = site.data.project %}
       {% include post-layout.html type="project" img-src="/img/project" source=element-source offset=0 limit=4 %}
@@ -74,7 +74,7 @@ js:
 <!-- reading books -->
 <section class="alt-color section">
   <div class="container">
-    {% include sec-title.html title="Sách tôi vừa đọc" href="/reading" more="xem toàn bộ sách" %}
+    {% include sec-title.html title="Recent read books" href="/reading" more="see all books" %}
     {% if site.author.ncb != blank %} <!-- if there is a target -->
       {% assign total_book = site.author.ncb %}
       {% assign counter = 0 %}
@@ -94,7 +94,7 @@ js:
             <div class="col-12 col-md-10" style="margin-bottom: 2rem;">
               <div class="progress" style="height: 40px;">
                 <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning px-3" role="progressbar" aria-valuenow="{{ percentage }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percentage }}%">
-                  <span>{{ read_book }} / {{ total_book }} sách trong năm 2018</span>
+                  <span>{{ read_book }} / {{ total_book }} books in 2018</span>
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@ js:
 <!-- sketch -->
 <section id="idx-sketch" class="alt-color section">
   <div class="container mb-5">
-    {% include sec-title.html title="Hình vẽ gần đây" href="/sketch" more="xem những hình khác" %}
+    {% include sec-title.html title="Latest sketches" href="/sketch" more="see all photos" %}
     <div class="row justify-content-center">
       {% include sketch.html offset=0 limit=8 %}
     </div>
@@ -120,7 +120,7 @@ js:
 <!-- thoughts -->
 <section class="alt-color section">
   <div class="container">
-    {% include sec-title.html title="Tạp ghi" href="/thought" more="xem những bài khác" %}
+    {% include sec-title.html title="Latest thoughts" href="/thought" more="see all posts" %}
     <div class="row row-eq-height justify-content-center">
       {% assign element-source = site.categories.thought %}
       {% include post-layout.html type="thought" source=element-source offset=0 limit=12 %}
@@ -131,7 +131,7 @@ js:
 <!-- tutorials -->
 <section id="idx-tutorial" class="alt-color section">
   <div class="container mb-5">
-    {% include sec-title.html title="Toán học và công nghệ" href="/tutorial" more="xem đầy đủ" %}
+    {% include sec-title.html title="Recent tutorials" href="/tutorial" more="see all posts" %}
     <div class="row row-eq-height justify-content-center">
       {% assign element-source = site.categories.tutorial %}
       {% include post-layout.html type="tutorial" source=element-source offset=0 img-src="/img/tutorial" limit=6 %}

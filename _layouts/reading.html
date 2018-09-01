@@ -34,19 +34,19 @@ more-css:
   {% endif %}
   <section id="reading-challenge" class="section alt-color">
     <div class="container">
-      {% include sec-title.html title="Thử thách đọc năm 2018" %}
+      {% include sec-title.html title="Reading challenge 2018" %}
       <div class="row justify-content-center">
         <div class="col-12">
           <div class="progress" style="height: 40px;">
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning px-3" role="progressbar" aria-valuenow="{{ percentage }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percentage }}%">
-              <span>Đã đọc {{ read_book }} / {{ total_book }} quyển</span>
+              <span>Read {{ read_book }} / {{ total_book }} books</span>
             </div>
           </div>
         </div>
       </div>
       <div class="sec-more-title mt-4 mb-2 text-center col-12">
         <h4>
-          những quyển đã hoàn thành
+          already-read books
         </h4>
         <hr class="mt-1">
       </div>
@@ -63,7 +63,7 @@ more-css:
       <div class="row justify-content-center">
         <div class="sec-more-title text-center mt-4 mb-2 mx-auto col-12">
           <h4>
-            Các thẻ trong chủ đề đọc sách
+            All tags in this subject
           </h4>
           <hr class="mt-1">
           {% include tag-list.html src="/tags/reading" %}
@@ -76,7 +76,7 @@ more-css:
 <!-- read books -->
 <section class="section alt-color reading-layout">
   <div class="container">
-    {% include sec-title.html title="Tôi giới thiệu" %}
+    {% include sec-title.html title="My reading list" %}
     {% if total_page > 1 %}
       <div class="mb-2">
         {% include pagination.html type="reading" %}
@@ -101,7 +101,7 @@ more-css:
 <!-- to-read books -->
 <section id="to-read" class="section alt-color">
   <div class="container">
-    {% include sec-title.html title="Sách sẽ đọc" %}
+    {% include sec-title.html title="To-read books" %}
     <div class="row row-eq-height justify-content-center">
       {% assign element-source = site.data.to-read %}
       {% include post-layout.html type="thought" source=element-source offset=0 %}

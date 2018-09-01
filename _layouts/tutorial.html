@@ -29,7 +29,7 @@ more-css:
 {% if is_snippet == true %}
   <section class="section alt-color">
     <div class="container">
-      {% include sec-title.html title="Đánh dấu" more="Bạn sẽ đọc nhiều hơn một lần đấy" %}
+      {% include sec-title.html title="Snippets" more="You need them more than once" %}
       <div class="row row-eq-height justify-content-center">
         {% for element in site.categories.tutorial %}
           {% if element.snippet %}
@@ -42,7 +42,7 @@ more-css:
       <div class="row justify-content-center">
         <div class="sec-more-title text-center mt-4 mb-2 mx-auto col-12">
           <h4>
-            Những thẻ trong chủ đề này
+            All tags in this subject
           </h4>
           <hr class="mt-1">
           {% include tag-list.html src="/tags/tutorial/" %}
@@ -55,7 +55,7 @@ more-css:
 <!-- all tutorials -->
 <section class="section alt-color-top">
   <div class="container">
-    {% include sec-title.html title="Tất cả bài viết" %}
+    {% include sec-title.html title="All posts" %}
     {% if total_page > 1 %}
       <div class="mb-2">
         {% include pagination.html type="tutorial" %}

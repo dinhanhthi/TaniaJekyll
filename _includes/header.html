@@ -47,7 +47,7 @@
           <div class="col-md-8 offset-md-2 col-12 text-center">
             {% if page.nav == 'about' %}
               <div class="img-avatar mb-3">
-                <img src="{{site.baseurl}}/img/real_avatar.jpg">
+                <img src="{{site.baseurl}}{{site.author.avatar}}">
               </div>
             {% endif %}
             <h1>{{ page.title }}</h1>
@@ -96,11 +96,11 @@
           <div class="col-md-6 text-center idx-abt">
             <h1>{{ site.author.name }}</h1>
             <p>
-              Chào bạn! Tôi là <span style="color: #fff;">Thi</span>, một người thích Toán, thích lập trình và không ngừng tự học.
-              Trên trang này, tôi muốn chia sẻ với bạn những thứ <span class="tgreen">hay ho</span> và <span class="tgreen">bổ ích</span> tôi biết được.
+              Hi! I'm a maths-lover, developer, writer and autodidact.<br />
+              I'd like to share with you some <span class="tgreen">useful &amp; free</span> things.
             </p>
             <p class="idx-social">
-              <a class="mr-s" href="{{site.baseurl}}/about"><i class="fa fa-heart"></i> Về tôi</a>
+              <a class="mr-s" href="{{site.baseurl}}/about"><i class="fa fa-heart"></i> About</a>
               <a class="mr-s" target="_blank" href="https://github.com/{{ site.author.github }}"><i class="fa fa-github"></i> Github</a>
               {% if site.lang.current == 'en' %}
                 <a href="{{ site.lang.other_url }}">

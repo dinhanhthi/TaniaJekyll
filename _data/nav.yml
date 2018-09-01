@@ -4,27 +4,27 @@
   icon: fa-home
   name: home
   color: ffeead
-- title: Toán Tin
+- title: Tutorials
   url: /tutorial
   icon: fa-map-o
   name: tutorial
   color: fc5d76
-- title: Tôi đọc
+- title: Reading
   url: /reading
   icon: fa-book
   name: reading
   color: 5eeda3
-- title: Thi
+- title: TaniaJekyll
   url: /about
   icon: fa-heart-o
   name: about
   color: 3292f6
-- title: Vẽ vời
+- title: Photos
   url: /sketch
   icon: fa-pencil
   name: sketch
   color: fdb54b
-- title: Tạp ghi
+- title: Thoughts
   url: /thought
   icon: fa-commenting-o
   name: thought
