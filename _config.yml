@@ -5,6 +5,18 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 title-separator: "-"
 
+author:
+  name: TaniaJekyll
+  github: dinhanhthi
+  facebook: math2it
+  email: dinhanhthimail@gmail.com
+  avatar: /img/user.png
+  ncb: 10 # number of challenge books
+
+lang:
+  current: en
+  other_url: http://vn.dinhanhthi.com
+
 # Build settings
 timezone: "Europe/Paris"
 markdown: kramdown
