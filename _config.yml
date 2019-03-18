@@ -13,10 +13,6 @@ author:
   avatar: /img/user.png
   ncb: 10 # number of challenge books
 
-lang:
-  current: en
-  other_url: http://vn.dinhanhthi.com
-
 # Build settings
 timezone: "Europe/Paris"
 markdown: kramdown
