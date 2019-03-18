@@ -7,6 +7,8 @@
     float: right;
     max-width: 40%;
     margin-top: 1.5rem;
+    position: relative;
+    z-index: 99;
 
     .toc-title{
         background-color: #ddd;
@@ -24,17 +26,63 @@
         max-height: 430px;
         overflow: auto;
         font-size: 1rem;
+        a{
+            color: #2f74bd;
+            border-bottom: none;
+            box-shadow: none;
+        }
+        a:hover{
+            color: #0085A1;
+            text-decoration: none;
+            border-bottom: none;
+            box-shadow: none;
+        }
     }
 
     @media (min-width: 768px) {
         margin-right: -5rem;
     }
+    @media (min-width: 850px) {
+        margin-right: -7rem;
+    }
+    @media (min-width: 900px) {
+        margin-right: -9rem;
+    }
+    @media (min-width: 992px) {
+        margin-right: -11rem;
+    }
 }
 
-@media only screen and (max-width: 769px){
+@media only screen and (max-width: 767px){
     #toc{
         float: none;
         margin-left: 0;
         max-width: 100%;
+    }
+}
+
+#markdown-toc{
+    ul{
+        padding-left: 20px;
+    }
+}
+
+// numbering
+#toc-content{
+    counter-reset: item;
+    list-style-type: none;
+    padding-left: 0!important;
+    ol{
+        counter-reset: item;
+        list-style-type: none;
+    }
+    li{ 
+        &::before{
+            content: counters(item, ".") ". ";
+            counter-increment: item;
+        }
+        a{
+            display: contents;
+        }
     }
 }

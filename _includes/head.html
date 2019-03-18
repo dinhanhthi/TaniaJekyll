@@ -14,14 +14,18 @@
     <link rel="alternate" hreflang="{{ other_lang }}" href="{% if page.categories %}/{% endif %}{{ page.categories[0] }}/{{ page.lang_url }}" />
   {% endif %}
 
-  <link rel="shortcut icon" type="image/jpg" href="{{site.baseurl}}/img/avatar-icon.jpg">
-  <meta name="author" content="Dinh Anh Thi" />
+  {% if site.google_analytics %}
+    {% include google_analytics.html %}
+  {% endif %}
+
+  <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}{{site.data.favicon}}">
+  <meta name="author" content="{{ site.data.author.name }}" />
 
   <title>
     {% if page.url != "/" %}
-      Thi | {{ page.title }}
+      TaniaJekyll | {{ page.title }}
     {% else %}
-      {{ site.author.name }} | {{ site.description }}
+      {{ site.title }} | {{ site.description }}
     {% endif %}
   </title>
 
@@ -45,6 +49,11 @@
       <link rel="stylesheet" href="{{ css | prepend: site.baseurl | replace: '//', '/' }}" />
     {% endfor %}
   {% endif %}
+
+  <!-- heading numbering -->
+  {% unless page.notnumbering %}
+    <link rel="stylesheet" href="{{site.baseurl}}/css/notnumbering.css" />
+  {% endunless %}
 
   <!-- layout (external) -->
   {% if layout.base-ext-css %}
@@ -85,6 +94,10 @@
     <meta property="fb:app_id" content="{{ site.fb_app_id }}" />
   {% endif %}
 
+  {% if site.author.facebook %}
+    <meta property="fb:admins" content="{{ site.author.facebook }}"/>
+  {% endif %}
+
   {% if page.meta-title %}
     <meta property="og:title" content="{{ page.meta-title }}" />
   {% elsif page.title %}
@@ -114,11 +127,11 @@
 
   <!-- page's cover -->
   {% if page.bigimg %}
-    <meta property="og:image" content="{{site.baseurl}}{{ page.bigimg }}" />
+    <meta property="og:image" content="{{site.url}}{{site.baseurl}}{{ page.bigimg }}" />
     <meta property="og:image:width" content="1234">
     <meta property="og:image:height" content="592">
   {% else %}
-    <meta property="og:image" content="{{site.baseurl}}/img/defaultCoverPost.png" />
+    <meta property="og:image" content="{{site.url}}{{site.baseurl}}/img/defaultCoverPost.png" />
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1234">
     <meta property="og:image:height" content="592">
@@ -153,7 +166,7 @@
 
     <script type="text/javascript">
       var Titles = [{% for post in posts %}"{{ post.title }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
-      var Urls = [{% for post in posts %}"{{ post.url | prepend: site.baseurl | replace: '//', '/' }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
+      var Urls = [{% for post in posts %}"{{ post.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
       {% if page.subtitle %}
         var Subtitles = [{% for post in posts %}"{{ post.subtitle }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
       {% endif %}
@@ -169,6 +182,12 @@
       {% if page.rating %}
         var Ratings = [{% for post in posts %}"{{ post.rating }}"{% unless forloop.last %},{% endunless %}{% endfor %}];
       {% endif %}
+
+      {% assign submitDate = site.time | date: '%s' %}
+      {% if element.update and daySince == 0 %}
+      <div class="ribbon">updated</div>
+      {% endif %}
+      var Updates = [{% for post in posts %}{% assign postDate = post.date | date: '%s' %}{% assign diffDate = submitDate | minus: postDate %}{% assign daySince = diffDate | divided_by: 604800 %}{% if post.update and daySince == 0 %}"true"{% else %}"false"{% endif %}{% unless forloop.last %},{% endunless %}{% endfor %}];
     </script>
 
   {% endif %}

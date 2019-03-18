@@ -1,0 +1,114 @@
+body{
+  font-family: $f-main;
+  font-size: $f-size;
+}
+a{
+  color: #2f74bd;
+}
+a:hover{
+  color: #0085A1;
+  text-decoration: none;
+}
+
+.a-diff{
+  a{
+    color: inherit;
+    font-weight: inherit;
+    border-bottom: 2px solid #2dbbebc4;
+    box-shadow: inset 0 -3px 0 #A6DCF3;
+  }
+  a:hover{
+    border-bottom: 2px solid #eb2dcfc4;
+    box-shadow: inset 0 -3px 0 #eea6f3;
+  }
+}
+
+.post-a-diff ul a{
+  border-bottom: none!important;
+  box-shadow: none!important;
+  &:hover{
+    border-bottom: 2px solid #eb2dcfc4!important;
+    box-shadow: inset 0 -3px 0 #eea6f3!important;
+  }
+}
+
+a.my-des{
+  border: none!important;
+  box-shadow: none!important;
+  color: #947807!important;
+  font-style: italic;
+}
+
+
+// color
+.tgreen{
+  color: $c-green;
+}
+.tyellow{
+  color: $c-yellow-text;
+}
+
+// subject
+sbj{
+  color: #d83173;
+  font-size: 1.2rem;
+}
+
+
+// em, b, strong
+em, b, strong{
+  overflow-wrap: break-word;
+}
+
+
+// keyboard
+kbd{
+  background-color: #f7f7f7;
+  border: 1px solid rgba(0,0,0,.3);
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.2), inset 0 0 0 2px #fff;
+  color: #333;
+  display: inline-block;
+  margin: 0 .1em;
+  padding: .2em .6em 0 .6em;
+  text-shadow: 0 1px 0 #fff;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: .8rem;
+}
+
+// description
+des{
+    display: block;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #555;
+    margin-top: 0.25rem;
+}
+
+// highlight
+.mark, mark{
+  padding: .1em .2em;
+  background-color: #fff6b3;
+}
+
+// more link
+p.more-link{
+  i{
+    font-size: 1.2rem;
+    color: #008000de;
+    font-weight: 600;
+  }
+  a{
+    color: #008000;
+    border-bottom: none;
+    box-shadow: none;
+    font-weight: 600;
+  }
+}
+
+// math
+.MathJax_Display{
+  overflow-x: auto;
+  overflow-y: hidden;
+}

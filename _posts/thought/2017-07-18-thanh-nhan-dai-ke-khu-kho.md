@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Thánh nhân đãi kẻ khù khờ"
-bookimg: /img/bookimg/matma.jpg
+img: s3_thumbnail.jpg
 tags: [toán học, cảm nhận]
 categories: thought
 ---

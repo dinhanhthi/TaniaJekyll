@@ -2,7 +2,6 @@
 layout: page
 more-css:
   - "/css/tutorial.css"
-  - "/css/thought.css"
   - "/css/tag-page.css"
 ---
 
@@ -30,7 +29,7 @@ more-css:
   <section class="section alt-color">
     <div class="container">
       {% include sec-title.html title="Snippets" more="You need them more than once" %}
-      <div class="row row-eq-height justify-content-center">
+      <div class="row row-eq-height justify-content-center snippet">
         {% for element in site.categories.tutorial %}
           {% if element.snippet %}
             {% assign class-col = 'col-6 col-md-4 col-lg-2 p-2' %}
@@ -42,10 +41,10 @@ more-css:
       <div class="row justify-content-center">
         <div class="sec-more-title text-center mt-4 mb-2 mx-auto col-12">
           <h4>
-            All tags in this subject
+            Tips by tags
           </h4>
           <hr class="mt-1">
-          {% include tag-list.html src="/tags/tutorial/" %}
+          {% include tag-list.html src="/tags/tutorial" %}
         </div>
       </div>
     </div>
@@ -55,7 +54,7 @@ more-css:
 <!-- all tutorials -->
 <section class="section alt-color-top">
   <div class="container">
-    {% include sec-title.html title="All posts" %}
+    {% include sec-title.html title="All tricks" %}
     {% if total_page > 1 %}
       <div class="mb-2">
         {% include pagination.html type="tutorial" %}

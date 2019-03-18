@@ -1,0 +1,30 @@
+# site's components
+favicon: /img/favicon.ico
+
+# Author's information
+author:
+  name: TaniaJekyll
+  github: dinhanhthi
+  facebook: math2it
+  email: dinhanhthi@gmail.com
+  avatar: /img/avatar.png
+  cv: /files/mycv.pdf
+  mynote:
+    url: https://mynote.dinhanhthi.com
+    text: <span>mynote</span>.dinhanhthi.com
+    description: I write this NoteTheme theme for noting all of what I have studied.
+    img: /img/mynote.png
+
+# number of challenge books
+ncb: 10
+
+# site's language
+lang:
+  current: en # current site's language
+  other_url: http://vn.dinhanhthi.com # other language
+
+# disqus shortname
+disqus: note-thi
+
+# number of photo files in /img/sketch
+nsketch: 67

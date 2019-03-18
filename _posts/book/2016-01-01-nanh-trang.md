@@ -1,14 +1,18 @@
 ---
 layout: post
 header: reading
-title: "Nanh trắng"
+title: "White Fang"
 subtitle: Jack London
-subtitle_link: https://vi.wikipedia.org/wiki/Jack_London
-tags: [tiểu thuyết]
-img: nanhtrang.jpg
+subtitle_link: https://en.wikipedia.org/wiki/Jack_London
+tags: [fiction]
+img: s17_thumbnail.jpg
 categories: reading
 rating: 3.5
 ---
+
+<div class="alert alert-success" role="alert">
+Below comments are in Vietnamese, please wait for an English version.
+</div>
 
 Tôi bắt đầu đọc quyển sách này khi đang nhập viện điều trị bệnh viêm màng bồ đào sau chuyến đi chơi Hà Lan. Thật ra tôi nghe sách nói chứ không trực tiếp đọc bằng mắt tác phẩm này, lý do cũng bởi vì căn bệnh phát sinh ngay ở mắt.
 

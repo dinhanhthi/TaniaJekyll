@@ -10,6 +10,7 @@
       + book: 1,2,3 (3 = author)
       + tutorial: 1,2,4,5
       + thought: 2,4
+      + thought2: 1,2,4
     - source: the source of posts/elements
     - img-src: source of images
     - offset: from which the posts are collected
@@ -31,6 +32,9 @@
   {% when "thought" %}
     {% assign class-col = 'col-6 col-md-4 col-lg-2 p-2' %}
     {% assign class-main = 'thought-main' %}
+  {% when "thought2" %}
+    {% assign class-col = 'col-6 col-sm-4 col-md-3 text-center mb-3' %}
+    {% assign class-main = 'thought2-main' %}
   {% when "tutorial" %}
     {% assign class-main = 'tutorial-main' %}
     {% assign class-col = 'col-6 col-md-4 col-lg-2 p-2' %}

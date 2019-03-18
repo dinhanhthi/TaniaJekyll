@@ -3,7 +3,7 @@ layout: post
 title: "Niềm tin vào khoa học"
 tags: [toán học, cảm nhận, xem phim]
 categories: thought
-bigimg: /img/post/bigimg/science.jpg
+img: s2_thumbnail.jpg
 ---
 
 Truyện kể về hai cậu bé có niềm tin khác nhau. Một cậu chỉ tin khi đã thấy kết quả, một cậu tin vào quá trình cho dù chưa có kết quả.

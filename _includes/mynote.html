@@ -1,0 +1,22 @@
+<section class="section alt-color">
+  <div class="container">
+    {% include sec-title.html title="My notes" more="You cannot remember everything." %}
+    <div class="row align-items-center justify-content-center mynote">
+      <div class="col-12 col-md-4">
+        <div class="description">
+            <a href="{{site.data.setting.author.mynote.url}}">
+              {{site.data.setting.author.mynote.text}}
+            </a>
+            <div class="more">
+              {{site.data.setting.author.mynote.description}}
+            </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-8">
+        <div class="showcase">
+          <img alt="My notes" src="{{site.data.setting.author.mynote.img}}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -4,7 +4,7 @@
 }
 
 // section background
-.alt-color:nth-child(even) {
+.alt-color:nth-child(odd) {
   padding: 6rem 10px;
 
   @media (max-width: 575px){

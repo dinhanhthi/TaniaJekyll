@@ -9,13 +9,11 @@ more-js:
 ---
 
 {% assign cpage = page.current_page %}
-{% for photo in site.data.sketch %}
-  {% assign nbphotos = forloop.length %}
-  {% break %}
-{% endfor %}
+{% assign nb_photos = site.data.setting.nsketch %}
+{% assign nb_photos = nb_photos | plus: 0 %}
 {% assign off_set = cpage | minus: 1 %}
 {% assign off_set = off_set | times: 24 %}
-{% assign nbphotos = nbphotos | times: 1.0 %}
+{% assign nbphotos = nb_photos | times: 1.0 %}
 {% assign total_page = nbphotos | divided_by: 24 %}
 {% assign total_page =  total_page | ceil %}
 
@@ -28,9 +26,9 @@ more-js:
     {% endif %}
     <div class="row justify-content-center">
       {% if cpage == 1 %}
-        {% include sketch.html offset=0 limit=24 %}
+        {% include sketch.html offset=0 limit=24 nbphotos=nb_photos %}
       {% else %}
-        {% include sketch.html offset=off_set limit=24 %}
+        {% include sketch.html offset=off_set limit=24 nbphotos=nb_photos %}
       {% endif %}
     </div>
     {% if total_page > 1 %}

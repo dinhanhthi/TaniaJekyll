@@ -1,3 +1,12 @@
+{% if site.data.setting.lang.current == "en" %}
+  {% assign support_text = site.data.lang['footer'].support_text.en %}
+  {% assign support_button = site.data.lang['footer'].support_button.en %}
+  {% assign support_abt = site.data.lang['footer'].about.en %}
+{% else %}
+  {% assign support_text = site.data.lang['footer'].support_text.vn %}
+  {% assign support_button = site.data.lang['footer'].support_button.vn %}
+  {% assign support_abt = site.data.lang['footer'].about.vn %}
+{% endif %}
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 text-center p-4">
@@ -6,21 +15,17 @@
         &nbsp;&copy;&nbsp;
         {{ site.time | date: '%Y' }}
         &nbsp;&bull;&nbsp;
-        <a href="{{site.baseurl}}/about">About</a>
+        <a href="{{site.baseurl}}/about">{{support_abt}}</a>
       </div>
       <div class="mission my-2 tyellow">
-        With the internet, people can learn everything.
-        I wanna share with you one of <a href="{{site.baseurl}}/tutorial"><i>the best, quick and useful resources</i><a> so that you can save time to teach yourself.
+        {{support_text}}
       </div>
-      <div class="donate-me tgreen my-2">
+      <!-- <div class="donate-me tgreen my-2">
         <a target="_blank" href="https://www.paypal.me/DinhAnhThi">
           <i class="fa fa-paypal"></i>
-          Support Thi
+          {{support_button}}
         </a>
-      </div>
-      <div class="footer-more">
-        Themed by <a href="https://github.com/dinhanhthi/TaniaJekyll">TaniaJekyll</a>, run by Github Page and Jekyll.
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

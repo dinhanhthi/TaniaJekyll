@@ -45,125 +45,15 @@ $f-extra-bold: 800;
 
 // only for vn site
 @import 'thi-vn'; // _thi-vn.scss
-
-// section title
 @import 'tsection'; // _tsection.scss
-
-// pagination
 @import 'tpagination'; // _tpagination.scss
-
-// footer
 @import 'tfooter'; // _tfooter.scss
-
-// extra grid
 @import 'tgrid'; // _tgrid.scss
+@import 'font';
+@import 'code';
+@import 'box';
+@import 'tspacing';
 
-.row-eq-height > [class*='col-'] {
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-}
-
-// spacing
-@media (min-width: 1200px){
-  .px-xl-6{
-    padding-left: 4rem!important;
-    padding-right: 4rem!important;
-  }
-}
-
-// font
-body{
-  font-family: $f-main;
-  font-size: $f-size;
-}
-a{
-  color: #2f74bd;
-}
-a:hover{
-  color: $c-a-hover;
-  text-decoration: none;
-}
-
-
-// color
-.tgreen{
-  color: $c-green;
-}
-.tyellow{
-  color: $c-yellow-text;
-}
-
-//code
-.highlight pre{
-  padding: 1rem;
-  tab-size: 4;
-}
-.highlight{
-  border-radius: 5px;
-}
-p>code,li>code{
-  background: #ececec;
-  border-radius: 4px;
-  padding: 2px 4px;
-}
-
-code{
-  color: #067b26;
-}
-
-h2>code, h3>code{
-  background: #ececec;
-  border-radius: 4px;
-  padding: 5px 5px 2px 5px;
-}
-
-// keyboard
-kbd{
-  background-color: #f7f7f7;
-  border: 1px solid rgba(0,0,0,.3);
-  border-radius: 3px;
-  box-shadow: 0 1px 0 rgba(0,0,0,.2), inset 0 0 0 2px #fff;
-  color: #333;
-  display: inline-block;
-  margin: 0 .1em;
-  padding: .2em .6em 0 .6em;
-  text-shadow: 0 1px 0 #fff;
-  font-weight: 400;
-  line-height: 1.4;
-  font-size: .8rem;
-}
-
-// terminal window
-.terminal{
-  font-family: monospace;
-  font-size: 1.1rem;
-  position: relative;
-  padding: 1rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,.16);
-  border-radius: 5px;
-  padding-top: 45px;
-  margin: 2rem 0;
-  &:before{
-    content: "\2022 \2022 \2022";
-    position: absolute;
-    border-radius: 5px 5px 0 0;
-    top: 0;
-    left: 0;
-    height: 25px;
-    background: #555;
-    color: #fff;
-    font-size: 2.5rem;
-    width: 100%;
-    line-height: 0;
-    margin: 0;
-    padding: 15px 0;
-    text-indent: 4px;
-    letter-spacing: -3px;
-  }
-}
 
 // back to top
 .back-to-top{
@@ -176,8 +66,3 @@ kbd{
     color: #555!important;
   }
 }
-// .post-content{ // for back to top
-//   h2,h3{
-//     padding-right: 40px;
-//   }
-// }

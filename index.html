@@ -1,7 +1,7 @@
 ---
 layout: base
 title: TaniaJekyll
-subtitle: A beautiful personal Jekyll theme
+subtitle: A beautiful personal theme
 nav: home
 lang: en
 css:
@@ -10,6 +10,8 @@ css:
   - "/css/lightbox.min.css"
   - "/css/contact-form.css"
   - "/css/post-layout.css"
+  - "/css/about.css"
+  - "/css/thought.css"
 js:
   - "/js/lightbox-plus-jquery.min.js"
   - "/js/contact-form.js"
@@ -18,7 +20,7 @@ js:
 {% include header.html type="index" %}
 
 <!-- quotes -->
-<section id="idx-quotes" class="alt-color text-center section">
+<section id="idx-quotes" class="alt-color section text-center">
   <div class="container">
     <div class="row">
       <div class="col-sm-8 offset-sm-2 col-12">
@@ -53,7 +55,7 @@ js:
           }
         </script>
         <p class="quote-more">
-          (<a href="{{site.baseurl}}/quote">see all favorite quotes</a>)
+          (<a href="{{site.baseurl}}/quote">see other quotes</a>)
         </p>
       </div>
     </div>
@@ -63,20 +65,21 @@ js:
 <!-- projects -->
 <section id="idx-project" class="alt-color section">
   <div class="container mb-4">
-    {% include sec-title.html title="Recent projects" href="/project" more="see all projects" %}
+    {% include sec-title.html title="Recent projects" href="project" more="see others" %}
     <div class="row justify-content-center">
       {% assign element-source = site.data.project %}
       {% include post-layout.html type="project" img-src="/img/project" source=element-source offset=0 limit=4 %}
     </div>
   </div>
+  {% include me-social.html %}
 </section>
 
 <!-- reading books -->
 <section class="alt-color section">
   <div class="container">
-    {% include sec-title.html title="Recent read books" href="/reading" more="see all books" %}
-    {% if site.author.ncb != blank %} <!-- if there is a target -->
-      {% assign total_book = site.author.ncb %}
+    {% include sec-title.html title="Books I've just read" href="/reading" more="see other books" %}
+    {% if site.data.setting.ncb != blank %} <!-- if there is a target -->
+      {% assign total_book = site.data.setting.ncb %}
       {% assign counter = 0 %}
       {% for post in site.categories.reading %}
         {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
@@ -107,34 +110,50 @@ js:
   </div>
 </section>
 
-<!-- sketch -->
-<section id="idx-sketch" class="alt-color section">
-  <div class="container mb-5">
-    {% include sec-title.html title="Latest photos" href="/sketch" more="see all photos" %}
-    <div class="row justify-content-center">
-      {% include sketch.html offset=0 limit=8 %}
-    </div>
-  </div>
-</section>
-
-<!-- thoughts -->
-<section class="alt-color section">
-  <div class="container">
-    {% include sec-title.html title="Latest thoughts" href="/thought" more="see all posts" %}
-    <div class="row row-eq-height justify-content-center">
-      {% assign element-source = site.categories.thought %}
-      {% include post-layout.html type="thought" source=element-source offset=0 limit=12 %}
-    </div>
-  </div>
-</section>
-
 <!-- tutorials -->
 <section id="idx-tutorial" class="alt-color section">
   <div class="container mb-5">
-    {% include sec-title.html title="Recent tutorials" href="/tutorial" more="see all posts" %}
+    {% include sec-title.html title="Tutorials" href="/tutorial" more="see full list" %}
     <div class="row row-eq-height justify-content-center">
       {% assign element-source = site.categories.tutorial %}
       {% include post-layout.html type="tutorial" source=element-source offset=0 img-src="/img/tutorial" limit=6 %}
+    </div>
+  </div>
+</section>
+
+<!-- thought -->
+<section id="idx-tutorial" class="alt-color section">
+  <div class="container mb-5">
+    {% include sec-title.html title="My thought" href="/thought" more="see full list" %}
+    <div class="row row-eq-height justify-content-center">
+      {% assign element-source = site.categories.thought %}
+      {% include post-layout.html type="thought" source=element-source offset=0 limit=6 %}
+    </div>
+  </div>
+</section>
+
+<!-- thought2 -->
+<section id="idx-tutorial" class="alt-color section">
+  <div class="container mb-5">
+    {% include sec-title.html title="My thought" href="/thought" more="see full list" %}
+    <div class="row row-eq-height justify-content-center">
+      {% assign element-source = site.categories.thought %}
+      {% include post-layout.html type="thought2" source=element-source offset=0 img-src="/img/thought" limit=6 %}
+    </div>
+  </div>
+</section>
+
+<!-- my notes -->
+{% include mynote.html %}
+
+<!-- sketch -->
+<section id="idx-sketch" class="alt-color section">
+  <div class="container mb-5">
+    {% include sec-title.html title="Latest sketches" href="/sketch" more="see other ones" %}
+    <div class="row justify-content-center">
+      {% assign nb_photos = site.data.setting.nsketch %}
+      {% assign nb_photos = nb_photos | plus: 0 %}
+      {% include sketch.html offset=0 limit=8 nbphotos = nb_photos %}
     </div>
   </div>
 </section>

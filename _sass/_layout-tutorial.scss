@@ -20,7 +20,7 @@
       color: #666;
     }
     .element-description{
-      color: #333;
+      color: #555;
     }
   }
   .element-photo img{
@@ -36,13 +36,31 @@
     font-size: 0.75rem;
     color: #888;
     font-weight: 600;
+    display: none;
   }
   .element-description{
     margin-top: 10px;
-    font-size: 0.9rem;
-    color: #555;
+    font-size: 0.87rem;
+    color: #666;
   }
   .element-subtitle{
+    display: none;
+  }
+
+  .ribbon{
+    // top: 5px;
+    // left: 60px;
+    top: 18px;
+    right: -45px;
+  }
+}
+
+.snippet{
+  .thought-main .element-date{
+    display: none;
+  }
+  .thought-main .element-subtitle{
+    // padding: 0 5px;
     display: none;
   }
 }

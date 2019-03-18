@@ -1,13 +1,16 @@
 .tomTat{
-  margin: 2rem 0;
+  margin: 2rem 0 1rem 0;
   border: 1px solid #ddd;
   padding: 1rem 2rem 1rem 1rem;
   background: #f1f1f194;
   // border-radius: 5px;
+  &+p, &+ul, &+ol{
+    margin-top: 2rem;
+  }
 }
 
 #btTomTat{
-  color: #0071e6;
+  color: #172533;
   padding: 0 2rem 2px 0;
   font-weight: 600;
   cursor: pointer;
@@ -30,11 +33,11 @@
   }
 
   &:hover{
-    color: #0085A1;
+    color: #2b8933;
   }
 }
 
-#ndTomTat, .ndTomTat{
+.ndTomTat, #ndTomTat{
   padding: 1.25rem 0 0 1.25rem;
   margin-left: 6px;
   margin-top: -10px;
@@ -56,4 +59,24 @@
   h2:first-child, h3:first-child{
     margin-top: 1rem!important;
   }
+
+  h2, h3{
+    margin-left: 0!important;
+  }
+
+  &> ul, &> ol{
+    @media(max-width: 992px){
+      padding-left: 0;
+    }
+  }
+
+  @media(max-width: 768px){
+    p{
+      margin-left: -1.25rem;
+    }
+  }
+}
+
+li > .tomTat{
+  margin-top: 1rem;
 }

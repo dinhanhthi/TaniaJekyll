@@ -12,10 +12,9 @@ more-css:
     <div class="row justify-content-center">
       <div class="col-12 col-sm-8 tag-nav">
         <div class="text">
-          Click on tag you wanna see its posts.
+          Choose the tag you wanna see its posts
         </div>
         {% assign tag_src = '/tags/' | append: page.nav %}
-        {% assign tag_src = tag_src | append: '/' %}
         {% include tag-list.html src=tag_src %}
       </div>
       {% for tag in site.tags %}
@@ -26,7 +25,7 @@ more-css:
               <ul class="post-list">
                 {% for post in tag[1] %}
                   <li>
-                    <a href="{{post.url | prepend: site.baseurl | replace: '//', '/' }}">
+                    <a href="{{site.baseurl}}{{post.url}}">
                       {{post.title}}
                       <small>{{post.date | date_to_string}}</small>
                     </a>

@@ -1,3 +1,15 @@
+{% if site.lang.current == "en" %}
+  {% assign more_title = site.data.lang['more_post'].title.en %}
+  {% assign more_reading = site.data.lang['section'].reading.more.en %}
+  {% assign more_thought = site.data.lang['section'].thought.more.en %}
+  {% assign more_tutorial = site.data.lang['section'].tutorial.more.en %}
+{% else %}
+  {% assign more_title = site.data.lang['more_post'].title.vn %}
+  {% assign more_reading = site.data.lang['section'].reading.more.vn %}
+  {% assign more_thought = site.data.lang['section'].thought.more.vn %}
+  {% assign more_tutorial = site.data.lang['section'].tutorial.more.vn %}
+{% endif %}
+
 {% case page.categories[0] %}
   {% when "reading" %}
     {% assign class-col = 'col-xs-6 col-sm-3 px-1 px-md-2' %}
@@ -5,12 +17,13 @@
     {% assign class-photo = 'p-3 p-md-4 px-lg-5 px-xl-6' %}
     {% assign limit = 4 %}
     {% assign img-src = '/img/bookimg' | prepend: site.baseurl %}
-    {% include sec-title.html title="Có thể bạn quan tâm?" href="/reading" more="xem những sách khác nữa" %}
+    {% include sec-title.html title=more_title href="/reading" more=more_reading %}
   {% when "thought" %}
-    {% assign class-col = 'col-6 col-md-4 col-lg-2 p-2' %}
-    {% assign class-main = 'thought-main' %}
-    {% assign limit = 6 %}
-    {% include sec-title.html title="Có thể bạn quan tâm?" href="/thought" more="xem thêm nhiều hơn" %}
+    {% assign class-col = 'col-6 col-sm-4 col-md-3 text-center mb-3' %}
+    {% assign class-main = 'thought2-main text-center' %}
+    {% assign img-src = '/img/thought' | prepend: site.baseurl %}
+    {% assign limit = 4 %}
+    {% include sec-title.html title=more_title href="/thought" more=more_thought %}
   {% when "tutorial" %}
     {% assign class-main = 'tutorial-main' %}
     {% assign class-col = 'col-6 col-md-4 col-lg-2 p-2' %}
@@ -18,7 +31,7 @@
     {% assign class-description = 'd-none d-sm-block' %}
     {% assign limit = 6 %}
     {% assign img-src = '/img/tutorial' | prepend: site.baseurl %}
-    {% include sec-title.html title="Có thể bạn quan tâm?" href="/tutorial" more="xem thêm nhiều thủ thuật khác" %}
+    {% include sec-title.html title=more_title href="/tutorial" more=more_tutorial %}
 {% endcase %}
 
 <div class="row row-eq-height justify-content-center">
@@ -63,6 +76,17 @@
         {% if page.img %}
           iimg = Imgs[randomIndex];
         {% endif %}
+
+        {% if site.lang.current == 'en' %}
+          {% assign udname = site.data.lang['update'].en %}
+        {% else %}
+          {% assign udname = site.data.lang['update'].vn %}
+        {% endif %}
+        if (Updates[randomIndex] == 'true'){
+          uupdate = '<div class="ribbon">{{ udname }}</div>';
+        }else{
+          uupdate = '';
+        }
 
         {% if page.rating %}
           rrating = Ratings[randomIndex];
@@ -135,6 +159,7 @@
           '<div class="' + class_col + '">' +
             '<div class="' + class_main + ' layout-main">' +
               '<a href="' + uurl + '">' +
+                uupdate +
                 '<div class="element-photo ' + class_photo + '">' +
                   '<img src="' + img_src + '/' + iimg + '"/>' +
                 '</div>' +

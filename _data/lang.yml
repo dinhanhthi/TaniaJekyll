@@ -1,0 +1,127 @@
+update:
+  en: "updated"
+  vn: "cập nhật"
+mycv:
+  en: "My CV"
+  vn: "CV của Thi"
+mynote:
+  en: "My Notes"
+  vn: "Ghi chú của Thi"
+nav:
+  home:
+    en: "Home"
+    vn: "Home"
+  tutorial:
+    en: "Tutorials"
+    vn: "Toán Tin"
+  reading:
+    en: "Reading"
+    vn: "Tôi đọc"
+  sketch:
+    en: "Sketches"
+    vn: "Vẽ vời"
+  thought:
+    en: "My notes"
+    vn: "Tạp ghi"
+index:
+  intro:
+    en: "Hi! I'm a beautiful jekyll template for your personal website. I have many layouts which are <span class=\"tgreen\">flexible</span> & <span class=\"tgreen\">clear</span> for different purposes."
+    vn: "Chào bạn! Tôi là <span style=\"color: #fff;\">Thi</span>, một người thích Toán, thích lập trình và không ngừng tự học. Trên trang này, tôi muốn chia sẻ với bạn những thứ <span class=\"tgreen\">hay ho</span> và <span class=\"tgreen\">bổ ích</span> tôi biết được."
+  about:
+    en: "About"
+    vn: "Về tôi"
+section:
+  project:
+    en: "Recent projects"
+    vn: "Dự án gần đây"
+    more:
+      en: "see others"
+      vn: "xem tất cả"
+  reading: 
+    en: "Books I've just read"
+    vn: "Sách tôi vừa đọc"
+    more:
+      en: "see other books"
+      vn: "xem toàn bộ sách"
+  tutorial:
+    en: "Tutorials"
+    vn: "Toán học và công nghệ"
+    more:
+      en: "see full list"
+      vn: "xem đầy đủ"
+  mynote:
+    en: "My notes"
+    vn: "Ghi chú của tôi"
+    more: 
+      en: "You cannot remember everything."
+      vn: "Bạn không thể nhớ hết mọi điều."
+  sketch:
+    en: "Latest sketches"
+    vn: "Hình vẽ gần đây"
+    more:
+      en: "see other ones"
+      vn: "xem những hình khác"
+  thought:
+    more:
+      en: "see others"
+      vn: "xem thêm nhiều hơn"
+footer:
+  support_text:
+    en: "With the internet, people can learn anything. I'd like to share with you one of the best and useful stuffs so that you can save your time on a self-study path."
+    vn: "Với internet, con người có thể học được mọi thứ. Tôi muốn chia sẻ với bạn một trong những tài nguyên hữu dụng và hiệu quả nhất để bạn có thể tiết kiệm thời gian của mình trên con đường tự học hỏi."
+  support_button:
+    en: "Support Thi"
+    vn: "Ủng hộ Thi"
+  about:
+    en: "About"
+    vn: "Giới thiệu"
+contact:
+  title: 
+    en: "Give me a talk"
+    vn: "Liên hệ"
+  more: 
+    en: "looking forward to getting your idea"
+    vn: "rất mong nhận được phản hồi của bạn"
+  name:
+    en: "Your name"
+    vn: "Tên của bạn"
+  email: 
+    en: "Your email"
+    vn: "Email của bạn"
+  message: 
+    en: "What you wanna say"
+    vn: "Nội dung thư"
+  send: 
+    en: "Send it to me"
+    vn: "Gởi thư"
+search:
+  placeholder:
+    en: "Type something..."
+    vn: "Gõ từ khóa bạn cần..."
+  title: 
+    en: "Search"
+    vn: "Tìm kiếm"
+  loading:
+    en: "Loading"
+    vn: "Đang tải"
+  result:
+    en: "results"
+    vn: "kết quả"
+  for_key: 
+    en: "for the keyword"
+    vn: "cho từ khóa"
+  js:
+    show:
+      en: "Showing"
+      vn: "Hiển thị"
+    no:
+      en: "No"
+      vn: "Không có"
+social:
+  title: 
+    en: "find me on"
+    vn: "xem hoạt động của tôi trên"
+more_post:
+  title:
+    en: "You may like?"
+    vn: "Có thể bạn quan tâm?"

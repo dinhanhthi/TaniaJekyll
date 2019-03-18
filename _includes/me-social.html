@@ -1,0 +1,25 @@
+{% if site.data.setting.lang.current == "en" %}
+  {% assign s_title = site.data.lang['social'].title.en %}
+{% else %}
+  {% assign s_title = site.data.lang['social'].title.vn %}
+{% endif %}
+<div class="container">
+  <div class="row justify-content-center me-social">
+    <div class="col-12">
+      <!-- <hr /> -->
+      <h3 class="title text-center">&mdash; {{s_title}} &mdash;</h3>
+    </div>
+    {% for item in site.data.social %}
+      <div class="d-flex align-content-around flex-wrap item">
+        <a href="{{ item.url }}" target="_blank">
+          <div class="so-img">
+            <img style="opacity: {{item.opacity}};" src="{{ site.baseurl }}/img/social/{{ item.icon }}" />
+          </div>
+          <div class="so-name">
+            {{ item.name }}
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -3,7 +3,7 @@ layout: post
 title: "Cái tâm cho giáo dục Việt của người Pháp"
 tags: [giáo dục,hồi ký, cảm nhận]
 categories: thought
-bigimg: /img/post/bigimg/tam-giao-duc.jpg
+img: s4_thumbnail.jpg
 ---
 
 Hôm qua gặp thầy Pascal. Thầy tuần này lên trường chắc có công chuyện. Hai thầy trò gặp nhau, hẹn đi về chung ra trạm xe bus.

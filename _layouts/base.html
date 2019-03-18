@@ -22,10 +22,11 @@ base-js:
 <html lang="en">
 {% include head.html %}
 <body>
+  {% include facebook-analytics.html %}
   <header>
     {% include nav.html %}
   </header>
-  
+
   {{ content }}
 
   <footer class="footer">

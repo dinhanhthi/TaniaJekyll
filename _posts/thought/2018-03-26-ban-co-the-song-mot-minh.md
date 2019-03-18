@@ -3,7 +3,7 @@ layout: post
 title: "Gởi những người bạn thích sống một mình"
 tags: [cảm nhận,paris,hồi ký]
 categories: thought
-bigimg: /img/post/bigimg/alone.jpg
+img: s1_thumbnail.jpg
 ---
 
 Cũng lâu rồi tôi không viết gì. Đây có thể nói là bài đầu tiên của năm 2018. Tôi đã trải qua một giai đoạn khá dài và nó vẫn đang tiếp tục diễn ra, một giai đoạn mà tôi thấy mình thật tĩnh lặng. Tôi không còn suy nghĩ nhiều như trước, mà đúng hơn là tôi không còn muốn chia sẻ nhiều như trước. Tôi chọn sống cho chính mình, trò chuyện với chính mình. Đó là lý do tôi đã từ bỏ việc chia sẻ status trên facebook và chuyển hẳn sang blog này để chỉ những ai thật sự quan tâm tôi mới có thể đọc được.

@@ -24,8 +24,16 @@
       width: calc(100% - 2rem);
       border-left: 3px solid #009688;
       padding: 1rem;
-      p:last-child{
+      p:last-of-type{
         margin-bottom: 0;
+      }
+      .highlighter-rouge{
+        &+p{
+          margin-top: 1.5rem;
+        }
+      }
+      &+ul, &+ol{
+        margin-top: 1rem;
       }
     }
   }

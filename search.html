@@ -1,19 +1,27 @@
 ---
 layout: base
-title: Search
 css:
   - "/css/search.css"
 ---
 
 {% include header.html type="search" %}
 
+{% if site.data.setting.lang.current == "en" %}
+	{% assign re_loading = site.data.lang['search'].loading.en %}
+	{% assign re_result = site.data.lang['search'].result.en %}
+	{% assign re_forkey = site.data.lang['search'].for_key.en %}
+{% else %}
+	{% assign re_loading = site.data.lang['search'].loading.vn %}
+	{% assign re_result = site.data.lang['search'].result.vn %}
+	{% assign re_forkey = site.data.lang['search'].for_key.vn %}
+{% endif %}
+
 <div class="container">
 	<div class="row justify-content-center mt-4 mb-4">
 		<div class="col-12 col-md-10">
 			<p class="result-title">
-				<span id="search-process">Loading</span> results <span id="search-query-container" style="display: none;">for keyword "<strong id="search-query"></strong>"</span>
+				<span id="search-process">{{re_loading}}</span> {{re_result}} <span id="search-query-container" style="display: none;">{{re_forkey}} "<strong id="search-query"></strong>"</span>
 			</p>
-
 			<ul id="search-results"></ul>
 		</div>
 	</div>

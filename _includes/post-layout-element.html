@@ -1,13 +1,24 @@
 <div class="{{ class-col }}">
   <div class="{{ class-main }} layout-main">
     {% if element.url %}
-      {% unless element.url contains 'http' %}
-      <a href="{{ element.url | prepend: site.baseurl | replace: '//', '/' }}">
-      {% else %}
       <a href="{{ element.url }}">
-      {% endunless %}
+
+        {% assign submitDate = site.time | date: '%s' %}
+        {% assign postDate = element.date | date: '%s' %}
+        {% assign diffDate = submitDate | minus: postDate %}
+        {% assign daySince = diffDate | divided_by: 604800 %}
+
+        {% if element.update and daySince == 0 %}
+        {% if site.lang.current == 'en' %}
+          {% assign udname = site.data.lang['update'].en %}
+        {% else %}
+          {% assign udname = site.data.lang['update'].vn %}
+        {% endif %}
+          <div class="ribbon">{{ udname }}</div>
+        {% endif %}
+
         <div class="element-photo {{ class-photo }}">
-          <img src="{{ include.img-src | prepend: site.baseurl | replace: '//', '/' }}/{{ element.img }}" />
+          <img src="{{site.baseurl}}{{ include.img-src }}/{{ element.img }}" />
         </div>
 
         <div class="element-title">
@@ -40,7 +51,7 @@
       </a>
     {% else %}
       <div class="element-photo {{ class-photo }}">
-        <img src="{{ include.img-src | prepend: site.baseurl | replace: '//', '/' }}/{{ element.img }}" />
+        <img src="{{site.baseurl}}{{ include.img-src }}/{{ element.img }}" />
       </div>
 
       <div class="element-title">

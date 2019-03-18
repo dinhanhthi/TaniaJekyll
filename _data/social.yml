@@ -1,0 +1,40 @@
+- name: Github
+  icon: github-bw.png
+  # icon: github.svg
+  url: https://github.com/dinhanhthi
+  opacity: 0.65
+- name: LinkedIn
+  icon: linkedin-bw.png
+  # icon: linkedin.svg
+  url: https://www.linkedin.com/in/dinhanhthi/
+  opacity: 0.65
+- name: HackerRank
+  icon: hackerrank-bw.svg
+  # icon: hackerrank.png
+  url: https://www.hackerrank.com/dinhanhthi
+  opacity: 0.65
+- name: DataQuest
+  icon: dataquest-bw.png
+  # icon: dataquest.png
+  url: https://www.dataquest.io/profile/dinhanhthimail
+  opacity: 1
+# - name: DataCamp
+#   icon: datacamp-bw.svg
+#   # icon: datacamp.svg
+#   url: https://www.datacamp.com/profile/dinhanhthi
+#   opacity: 1
+# - name: Duolingo
+#   icon: duolingo.png
+#   url: https://www.duolingo.com/mr.Thi
+#   opacity: 1
+- name: StackExchange
+  icon: stackexchange.png
+  url: https://stackexchange.com/users/1344291/anh-thi-dinh?tab=accounts
+  opacity: 0.65
+- name: Goodreads
+  icon: goodreads.svg
+  url: https://www.goodreads.com/user/show/19630622-thi-dinh
+  opacity: 0.8
+- name: Coursera
+  icon: coursera.png
+  url: https://www.coursera.org/user/47f27dde0ecab9a78e2c93632d78a556

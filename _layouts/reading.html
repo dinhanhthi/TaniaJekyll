@@ -2,7 +2,6 @@
 layout: page
 more-css:
   - "/css/reading.css"
-  - "/css/thought.css"
   - "/css/tag-page.css"
 ---
 
@@ -17,8 +16,8 @@ more-css:
 {% assign total_page = nbbooks | divided_by: 12 %}
 {% assign total_page =  total_page | ceil %}
 
-{% if site.author.ncb != blank %} <!-- if there is a target -->
-  {% assign total_book = site.author.ncb %}
+{% if site.data.setting.ncb != blank %} <!-- if there is a target -->
+  {% assign total_book = site.data.setting.ncb %}
   {% assign counter = 0 %}
   {% for post in site.categories.reading %}
     {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
@@ -32,9 +31,9 @@ more-css:
     {% assign percentage = counter | divided_by: total_book %}
     {% assign percentage = percentage | ceil  %}
   {% endif %}
-  <section id="reading-challenge" class="section alt-color">
+  <section id="reading-challenge" class="section">
     <div class="container">
-      {% include sec-title.html title="Reading challenge 2018" %}
+      {% include sec-title.html title="Reading challenge in 2018" %}
       <div class="row justify-content-center">
         <div class="col-12">
           <div class="progress" style="height: 40px;">
@@ -46,7 +45,7 @@ more-css:
       </div>
       <div class="sec-more-title mt-4 mb-2 text-center col-12">
         <h4>
-          already-read books
+          Books I've read
         </h4>
         <hr class="mt-1">
       </div>
@@ -56,14 +55,14 @@ more-css:
           {% if year == "2018" %}
             {% assign class-col = 'col-6 col-md-4 col-lg-2 p-2' %}
             {% assign class-main = 'thought-main' %}
-            {% include post-layout-element.html img-src="/img/reading" %}
+            {% include post-layout-element.html img-src="/img/bookimg" %}
           {% endif %}
         {% endfor %}
       </div>
       <div class="row justify-content-center">
         <div class="sec-more-title text-center mt-4 mb-2 mx-auto col-12">
           <h4>
-            All tags in this subject
+            Books by tags
           </h4>
           <hr class="mt-1">
           {% include tag-list.html src="/tags/reading" %}
@@ -74,9 +73,9 @@ more-css:
 {% endif %}
 
 <!-- read books -->
-<section class="section alt-color reading-layout">
+<section class="section reading-layout">
   <div class="container">
-    {% include sec-title.html title="My reading list" %}
+    {% include sec-title.html title="I introduce" %}
     {% if total_page > 1 %}
       <div class="mb-2">
         {% include pagination.html type="reading" %}
@@ -95,16 +94,5 @@ more-css:
         {% include pagination.html type="reading" %}
       </div>
     {% endif %}
-  </div>
-</section>
-
-<!-- to-read books -->
-<section id="to-read" class="section alt-color">
-  <div class="container">
-    {% include sec-title.html title="To-read books" %}
-    <div class="row row-eq-height justify-content-center">
-      {% assign element-source = site.data.to-read %}
-      {% include post-layout.html type="thought" source=element-source offset=0 %}
-    </div>
   </div>
 </section>

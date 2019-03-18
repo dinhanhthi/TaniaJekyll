@@ -1,17 +1,32 @@
+{% if site.data.setting.lang.current == "en" %}
+  {% assign contact-title = site.data.lang['contact'].title.en %}
+  {% assign contact-more = site.data.lang['contact'].more.en %}
+  {% assign contact-email = site.data.lang['contact'].email.en %}
+  {% assign contact-name = site.data.lang['contact'].name.en %}
+  {% assign contact-message = site.data.lang['contact'].message.en %}
+  {% assign contact-send = site.data.lang['contact'].send.en %}
+{% else %}
+  {% assign contact-title = site.data.lang['contact'].title.vn %}
+  {% assign contact-more = site.data.lang['contact'].more.vn %}
+  {% assign contact-email = site.data.lang['contact'].email.vn %}
+  {% assign contact-name = site.data.lang['contact'].name.vn %}
+  {% assign contact-message = site.data.lang['contact'].message.vn %}
+  {% assign contact-send = site.data.lang['contact'].send.vn %}
+{% endif %}
 <div class="container">
-  {% include sec-title.html title="Say hello" more="look forward to getting your ideas" %}
+  {% include sec-title.html title=contact-title more=contact-more %}
   <div class="row">
     <div class="col-sm-8 offset-sm-2 col-12">
       <form name="name-contact-form" method="POST" action="https://formspree.io/dinhanhthimail@gmail.com">
         <div class="form-group row contact-form">
-          <div class="col-sm-6 col-12 mb-3"><input onkeyup="enableButton()" type="text" name="name" placeholder="Your name"></div>
-          <div class="col-sm-6 col-12 mb-3"><input onkeyup="enableButton()" type="email" name="email" placeholder="Your email""></div>
+          <div class="col-sm-6 col-12 mb-3"><input onkeyup="enableButton()" type="text" name="name" placeholder="{{contact-name}}"></div>
+          <div class="col-sm-6 col-12 mb-3"><input onkeyup="enableButton()" type="email" name="email" placeholder="{{contact-email}}"></div>
           <div class="col-12 textarea-container mb-3">
-            <textarea onkeyup="enableButton()" id="abc" name="message" placeholder="Your message"></textarea>
+            <textarea onkeyup="enableButton()" id="abc" name="message" placeholder="{{contact-message}}"></textarea>
             <div class="textarea-size"></div>
           </div>
           <div id="contact-submit" class="col-12 text-center">
-            <button type="submit">Send</button>
+            <button type="submit">{{contact-send}}</button>
           </div>
         </div>
       </form>

@@ -3,7 +3,7 @@ layout: post
 title: "Đọc sách và ước mơ"
 tags: [cảm nhận, giáo dục]
 categories: thought
-bigimg: /img/post/bigimg/doc-sach.jpg
+img: s5_thumbnail.jpg
 ---
 
 Rất quan trọng những người biết tưởng tượng, biết cầu tiến. Tuy nhiên bạn sẽ không làm được gì nếu như chỉ có ý tưởng, chỉ có mục tiêu mà không có được gì trong tay để hiện thực hóa ý tưởng và mục tiêu ấy.

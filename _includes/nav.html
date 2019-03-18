@@ -1,3 +1,8 @@
+{% if site.lang.current == "en" %}
+  {% assign placeholder = site.data.lang['search'].title.en %}
+{% else %}
+  {% assign placeholder = site.data.lang['search'].title.vn %}
+{% endif %}
 <nav class="navbar navbar-dark nav-bg navbar-custom">
   <div class="container">
     {% assign navs = site.data.nav %}
@@ -7,20 +12,24 @@
       {% else %}
         {% assign cClass = nil %}
       {% endif %}
-      <a class="nav-{{ nav.name }} {{ cClass }}" href="{{site.baseurl}}{{ nav.url }}">
+      {% unless nav.url contains "http" %}
+		<a class="nav-{{ nav.name }} {{ cClass }}" href="{{site.baseurl}}{{ nav.url }}">
+	  {% else %}
+		<a class="nav-{{ nav.name }} {{ cClass }}" href="{{ nav.url }}" target="_blank">
+	  {% endunless %}
         <i class="fa {{ nav.icon }}" aria-hidden="true"></i>
         <span>{{ nav.title }}</span>
       </a>
     {% endfor %}
     <div class="nav-search">
         <form action="{{ site.baseurl }}/search" method="get">
-          <input name="q" class="mr-sm-2 nav-search-input" type="search" placeholder="search something..." aria-label="Search on this page">
+          <input name="q" class="mr-sm-2 nav-search-input" type="search" placeholder="{{placeholder}}..." aria-label="{{placeholder}}...">
           <button class="nav-search-submit" type="submit">
             <i class="fa fa-search" aria-hidden="true"></i>
           </button>
         </form>
       </div>
-      <!-- <div class="nav-lang">
+      <div class="nav-lang">
         {% if site.lang.current == 'en' %}
           <span class="en active">en</span>
           <a href="{{ site.lang.other_url }}" class="vn">vn</a>
@@ -28,6 +37,6 @@
           <a href="{{ site.lang.other_url }}" class="en">en</a>
           <span class="vn active">vn</span>
         {% endif %}
-      </div> -->
+      </div>
   </div>
 </nav>

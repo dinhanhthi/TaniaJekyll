@@ -1,6 +1,15 @@
 ---
 layout: null
 ---
+
+{% if site.data.setting.lang.current == "en" %}
+	{% assign js_show = site.data.lang['search'].js.show.en %}
+	{% assign js_no = site.data.lang['search'].js.no.en %}
+{% else %}
+	{% assign js_show = site.data.lang['search'].js.show.vn %}
+	{% assign js_no = site.data.lang['search'].js.no.vn %}
+{% endif %}
+
 (function () {
 	function getQueryVariable(variable) {
 		var query = window.location.search.substring(1),
@@ -73,10 +82,10 @@ layout: null
 			});
 
 			searchResultsEl.innerHTML = resultsHTML;
-			searchProcessEl.innerText = "Hiển thị";
+			searchProcessEl.innerText = "{{js_show}} ";
 		} else {
 			searchResultsEl.style.display = "none";
-			searchProcessEl.innerText = "No result ";
+			searchProcessEl.innerText = "{{js_no}} ";
 		}
 	}
 

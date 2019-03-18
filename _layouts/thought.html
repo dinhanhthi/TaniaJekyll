@@ -11,9 +11,9 @@ more-css:
   {% break %}
 {% endfor %}
 {% assign off_set = cpage | minus: 1 %}
-{% assign off_set = off_set | times: 24 %}
+{% assign off_set = off_set | times: 16 %}
 {% assign nbposts = nbposts | times: 1.0 %}
-{% assign total_page = nbposts | divided_by: 24 %}
+{% assign total_page = nbposts | divided_by: 16 %}
 {% assign total_page =  total_page | ceil %}
 
 <section class="section mb-0">
@@ -21,10 +21,10 @@ more-css:
     <div class="row justify-content-center">
       <div class="sec-more-title text-center mt-4 mx-auto col-12">
         <h4>
-          All tags in this subject
+          Post by tags
         </h4>
         <hr class="mt-1">
-        {% include tag-list.html src="/tags/thought/" %}
+        {% include tag-list.html src="/tags/thought" %}
       </div>
     </div>
   </div>
@@ -37,9 +37,9 @@ more-css:
         {% include pagination.html type="thought" %}
       </div>
     {% endif %}
-    <div class="row row-eq-height justify-content-center">
+    <div class="row justify-content-center">
       {% assign element-source = site.categories.thought %}
-      {% include post-layout.html type="thought" source=element-source offset=off_set limit=24 %}
+      {% include post-layout.html type="thought2" source=element-source offset=off_set limit=16 img-src="/img/thought"%}
     </div>
     {% if total_page > 1 %}
       <div class="my-2">

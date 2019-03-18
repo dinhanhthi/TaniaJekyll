@@ -1,13 +1,14 @@
 ---
 layout: page
-title: TaniaJekyll
-subtitle: A beautiful personal jekyll theme
+title: Anh-Thi Dinh
+subtitle: mathing, coding, writing and autodidact
 nav: about
 css:
   - "/css/contact-form.css"
   - "/css/post-layout.css"
   - "/css/page.css"
   - "/css/not-scss.css"
+  - "/css/about.css"
 js:
   - "/js/contact-form.js"
 permalink: /about
@@ -17,15 +18,15 @@ permalink: /about
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-7 col-md-9 text-center">
-        <p>
-          Khởi điểm là một nhà toán học bán chuyên, đầy tò mò và đam mê công nghệ, tôi có sở thích mãnh liệt trong việc chia sẻ về <strong>toán ứng dụng</strong>, <strong>khoa học máy tính</strong> và những <strong>công cụ số bổ ích</strong> cho cuộc sống con người. Với tôi, việc tìm ra cách truyền đạt dễ hiểu và trực quan một vấn đề cũng quan trọng như việc hiểu rõ vấn đề đó vậy. Đó là lý do vì sao tôi lập ra <a href="{{ site.baseurl }}/sketch">Math2IT</a>. Ngoài ra tôi cũng rất thích nấu ăn, <a href="{{ site.baseurl }}/sketch">vẽ</a>, <a href="{{ site.baseurl }}/reading">đọc sách</a> và <a href="{{ site.baseurl }}/tags/thought#travel">đi du lịch</a>.
+        <p class="a-diff">
+          My name is Anh-<b>Thi</b> Dinh, a Vietnamese guy who has a curious mind. As an never-stop-learning mathematician, I am interested in researching and sharing contents about <strong>applied maths</strong>, <strong>computer science</strong> and <strong>software tools</strong> which are helpful to human life. My hobbies are <a href="{{ site.baseurl }}/sketch"><b>drawing</b></a>, <a href="/reading"><b>reading</b></a> and <b>cooking</b>.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section my-4 alt-color">
+<!-- <section class="section my-4 alt-color">
   <div class="container">
     <div class="row justify-content-center align-items-center">
       <div class="col-12 col-md-8 text-center">
@@ -40,40 +41,100 @@ permalink: /about
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
-<!-- self learning -->
 {% assign img-src = '/img/about/' %}
 <section class="section alt-color">
   <div class="container">
-    {% include sec-title.html title="Con đường tự học" more="\"Thay đổi là kết quả cuối cùng của quá trình học tập nghiêm túc.\"" %}
-    {% for field in site.data.learning-field %}
-      {% capture left-right %}
-        {% cycle 'left', 'right' %}
-      {% endcapture %}
-      {% capture bleft-bright %}
-        {% cycle 'bleft', 'bright' %}
-      {% endcapture %}
-      <div class="row justify-content-center align-items-center my-learning">
-        <div class="col-md-2 d-none d-md-block field-img {{ left-right }}">
-          <img src="{{ site.baseurl }}{{ img-src }}{{ field.img }}">
-        </div>
-        <div class="col-12 col-md-10">
-          <h3 class="subject {{ left-right }}">
-            <img class="d-md-none" src="{{ site.baseurl }}{{ img-src }}{{ field.img }}">
-            <span style="color: {{ field.color  }}; border-color: {{ field.color  }}">{{ field.title }}</span>
-          </h3>
-          <div class="intro {{ left-right }}">{{ field.abstract }}</div>
-          <div class="content">
-            <div class="collapsed buttonD {{ left-right }}" data-toggle="collapse" href="#{{ field.title | slugify }}"><span>Chi tiết hơn</span></div>
-            <ul id="{{ field.title | slugify }}"  class="collapse multi-collapse {{ left-right }}">
+    {% include sec-title.html title="My learning path" more="\"Change is the result of persistent self-study.\"" %}
+    <div id="accordion" class="d-none d-md-block">
+      <div class="row row-eq-height justify-content-center">
+        {% for field in site.data.learning-field %}
+          <div class="col-6 col-md-3 p-2">
+            <div class="field-header" >
+              <a data-toggle="collapse" href="#{{ field.id }}" aria-expanded="false" aria-controls="math">
+                <div class="field-img">
+                  <img src="{{ site.baseurl }}{{ img-src }}{{ field.img }}">
+                </div>
+                <div class="field-subject">
+                  {{ field.title }}
+                </div>
+                <div class="field-des">
+                  {{ field.abstract }}
+                </div>
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="row justify-content-center">
+        {% for field in site.data.learning-field %}
+          <div class="collapse col-12" id="{{ field.id }}" data-parent="#accordion">
+            <div class="field-body">
               {% for item in field.detail %}
-                <li>
-                  <span class="year">{{ item.date }}</span> :
-                  <span class="activity">{{ item.activity }}</span>
-                  {% if item.more %}
-                    <div class="more">
+                <div class="each-item">
+                  <div class="each-item-header">
+                    <i class="fa {{ field.icon }}" aria-hidden="true"></i>
+                    <span class="date">{{ item.date }}</span> : 
+                    <span>{{ item.activity }}</span>
+                  </div>
+                  <div class="each-item-body">
+                    {{ item.more }}
+                    {% if item.link %}
+                      <a href="{{ item.link }}">
+                        {% if item.link-des %}
+                          ({{ item.link-des }})
+                        {% else %}
+                          (Link tham khảo)
+                        {% endif %}
+                      </a>
+                    {% endif %}
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- only on small devices -->
+    <div class="d-md-none">
+      <!-- 1 & 2 -->
+      <div id="accordion2" class="row row-eq-height justify-content-center">
+        {% for field in site.data.learning-field %}
+          {% if forloop.index == 1 or forloop.index == 2 %}
+            <div class="col-6 col-md-3 p-2">
+              <div class="field-header" >
+                <a data-toggle="collapse" href="#{{ field.id }}2" aria-expanded="false" aria-controls="math">
+                  <div class="field-img">
+                    <img src="{{ site.baseurl }}{{ img-src }}{{ field.img }}">
+                  </div>
+                  <div class="field-subject">
+                    {{ field.title }}
+                  </div>
+                  <div class="field-des">
+                    {{ field.abstract }}
+                  </div>
+                </a>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+        <!-- content -->
+        {% for field in site.data.learning-field %}
+          {% if forloop.index == 1 or forloop.index == 2 %}
+            <div class="collapse col-12" id="{{ field.id }}2" data-parent="#accordion2">
+              <div class="field-body">
+                {% for item in field.detail %}
+                  <div class="each-item">
+                    <div class="each-item-header">
+                      <i class="fa {{ field.icon }}" aria-hidden="true"></i>
+                      <span class="date">{{ item.date }}</span> : 
+                      <span>{{ item.activity }}</span>
+                    </div>
+                    <div class="each-item-body">
                       {{ item.more }}
                       {% if item.link %}
                         <a href="{{ item.link }}">
@@ -85,34 +146,100 @@ permalink: /about
                         </a>
                       {% endif %}
                     </div>
-                  {% endif %}
-              </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-2 d-none d-md-block field-img {{ bleft-bright }}">
-          <img src="{{ site.baseurl }}{{ img-src }}{{ field.img }}">
-        </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
-    {% endfor %}
+
+      <!-- 3 & 4 -->
+      <div id="accordion3" class="row row-eq-height justify-content-center">
+        {% for field in site.data.learning-field %}
+          {% if forloop.index == 3 or forloop.index == 4 %}
+            <div class="col-6 col-md-3 p-2">
+              <div class="field-header" >
+                <a data-toggle="collapse" href="#{{ field.id }}2" aria-expanded="false" aria-controls="math">
+                  <div class="field-img">
+                    <img src="{{ site.baseurl }}{{ img-src }}{{ field.img }}">
+                  </div>
+                  <div class="field-subject">
+                    {{ field.title }}
+                  </div>
+                  <div class="field-des">
+                    {{ field.abstract }}
+                  </div>
+                </a>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+        <!-- content -->
+        {% for field in site.data.learning-field %}
+          {% if forloop.index == 3 or forloop.index == 4 %}
+            <div class="collapse col-12" id="{{ field.id }}2" data-parent="#accordion3">
+              <div class="field-body">
+                {% for item in field.detail %}
+                  <div class="each-item">
+                    <div class="each-item-header">
+                      <i class="fa {{ field.icon }}" aria-hidden="true"></i>
+                      <span class="date">{{ item.date }}</span> : 
+                      <span>{{ item.activity }}</span>
+                    </div>
+                    <div class="each-item-body">
+                      {{ item.more }}
+                      {% if item.link %}
+                        <a href="{{ item.link }}">
+                          {% if item.link-des %}
+                            ({{ item.link-des }})
+                          {% else %}
+                            (Link tham khảo)
+                          {% endif %}
+                        </a>
+                      {% endif %}
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
   </div>
+  {% include me-social.html %}
 </section>
 
+<!-- my notes -->
+{% include mynote.html %}
 
 <!-- more info -->
-<section class="section alt-color">
+<section class="section alt-color a-diff">
   <div class="container">
-    {% include sec-title.html title="Thông tin thêm" %}
+    {% include sec-title.html title="More information" %}
     <div class="row align-items-center justify-content-center">
-      <div class="col-12 col-md-8">
-        <ul>
-          <li><b>Nơi ở hiện tại</b> : Pontoise, Pháp.</li>
-          <li><b>Công việc hiện tại</b> : Nghiên cứu sinh (tại trường Paris 13, Pháp) và Quản lý <a href="{{ site.baseurl }}/project/ma2thit">Math2IT</a></li>
-          <li><b>Đang tự học</b> : Python, Data Science và Machine Learning cơ bản.
-          <li><b>Sách đang đọc</b> : Chú bé mang pyjama sọc (John Boyne).
-          <li><b>Email</b> : <a href="mailto:dinhanhthimail@gmail.com">dinhanhthimail@gmail.com</a></li>
-        </ul>
+      <div class="col-12 col-md-8 more-info">
+        <div class="item">
+			<i class="fa fa-map-marker" aria-hidden="true"></i>
+			<span class="info-title">Current</span> : Paris, France.
+		</div>
+		<div class="item">
+			<i class="fa fa-briefcase" aria-hidden="true"></i>
+			<span class="info-title">Current job</span> : Freelancer ITer and manager at <a href="{{ site.baseurl }}/project/ma2thit">Math2IT</a>.
+		</div>
+		<div class="item">
+			<i class="fa fa-leanpub" aria-hidden="true"></i>
+			<span class="info-title">I'm studying</span> : Python, data Science and fundamental machine learning.
+		</div>
+		<div class="item">
+			<i class="fa fa-book" aria-hidden="true"></i>
+			<span class="info-title">I'm reading</span> : An introduction to Statistical Learning by Gareth James <i>et al</i>.
+		</div>
+		<div class="item">
+			<i class="fa fa-envelope" aria-hidden="true"></i>
+			<span class="info-title">Email</span> : <a href="mailto:{{site.author.email}}">{{site.author.email}}</a>
+		</div>
       </div>
     </div>
   </div>

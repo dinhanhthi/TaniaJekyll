@@ -4,7 +4,7 @@
   icon: fa-home
   name: home
   color: ffeead
-- title: Tutorials
+- title: Tutorial
   url: /tutorial
   icon: fa-map-o
   name: tutorial
@@ -19,12 +19,12 @@
   icon: fa-heart-o
   name: about
   color: 3292f6
-- title: Photos
+- title: Sketch
   url: /sketch
   icon: fa-pencil
   name: sketch
   color: fdb54b
-- title: Thoughts
+- title: Tạp ghi
   url: /thought
   icon: fa-commenting-o
   name: thought
