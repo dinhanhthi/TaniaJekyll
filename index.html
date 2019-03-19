@@ -74,6 +74,42 @@ js:
   {% include me-social.html %}
 </section>
 
+<!-- reading books -->
+<section class="alt-color section">
+  <div class="container">
+    {% include sec-title.html title="Books I've just read" href="/reading" more="see other books" %}
+    {% if site.data.setting.ncb != blank %} <!-- if there is a target -->
+      {% assign total_book = site.data.setting.ncb %}
+      {% assign counter = 0 %}
+      {% for post in site.categories.reading %}
+        {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
+          {% if year == site.data.setting.ncb-year %}
+            {% assign counter = counter | plus: 1 %}
+          {% endif %}
+      {% endfor %}
+      {% if counter > 0 %} <!-- there is some read book -->
+        {% assign read_book = counter %}
+        {% assign counter = counter | times: 100.0 %}
+        {% assign percentage = counter | divided_by: total_book %}
+        {% assign percentage = percentage | ceil  %}
+      {% endif %}
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10" style="margin-bottom: 2rem;">
+              <div class="progress" style="height: 40px;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning px-3" role="progressbar" aria-valuenow="{{ percentage }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percentage }}%">
+                  <span>{{ read_book }} / {{ total_book }} books in {{site.data.setting.ncb-year}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+    {% endif %}
+    <div class="row row-eq-height justify-content-center">
+      {% assign element-source = site.categories.reading %}
+      {% include post-layout.html type="reading" img-src="/img/bookimg" source=element-source offset=0 limit=4 %}
+    </div>
+  </div>
+</section>
+
 <!-- tutorials -->
 <section class="alt-color section">
   <div class="container mb-5">
