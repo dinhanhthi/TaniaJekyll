@@ -5,13 +5,13 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 title-separator: "-"
 
-<<<<<<< HEAD
+# Author's information
 author:
   name: TaniaJekyll
   github: dinhanhthi
   facebook: math2it
-  email: dinhanhthimail@gmail.com
-  avatar: /img/user.png
+  email: dinhanhthi@gmail.com
+  avatar: /img/avatar.png
   cv: /files/mycv.pdf
   mynote:
     url: https://mynote.dinhanhthi.com
@@ -19,9 +19,6 @@ author:
     description: I write this NoteTheme theme for noting all of what I have studied.
     img: /img/mynote.png
 
-
-=======
->>>>>>> parent of 8a522e5... test fix deploy
 # Build settings
 timezone: "Europe/Paris"
 markdown: kramdown
