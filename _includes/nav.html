@@ -1,4 +1,4 @@
-{% if site.lang.current == "en" %}
+{% if site.data.setting.lang.current == "en" %}
   {% assign placeholder = site.data.lang['search'].title.en %}
 {% else %}
   {% assign placeholder = site.data.lang['search'].title.vn %}
@@ -30,11 +30,11 @@
         </form>
       </div>
       <div class="nav-lang">
-        {% if site.lang.current == 'en' %}
+        {% if site.data.setting.lang.current == 'en' %}
           <span class="en active">en</span>
-          <a href="{{ site.lang.other_url }}" class="vn">vn</a>
+          <a href="{{ site.data.setting.lang.other_url }}" class="vn">vn</a>
         {% else %}
-          <a href="{{ site.lang.other_url }}" class="en">en</a>
+          <a href="{{ site.data.setting.lang.other_url }}" class="en">en</a>
           <span class="vn active">vn</span>
         {% endif %}
       </div>
