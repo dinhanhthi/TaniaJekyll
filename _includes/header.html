@@ -47,7 +47,7 @@
           <div class="col-md-8 offset-md-2 col-12 text-center">
             {% if page.nav == 'about' %}
               <div class="img-avatar mb-3">
-                <img src="{{site.baseurl}}{{site.data.setting.author.avatar}}">
+                <img src="{{site.baseurl}}{{site.author.avatar}}">
               </div>
             {% endif %}
             <h1>{{ page.title }}</h1>
@@ -60,8 +60,8 @@
                 {% assign abt-cv = site.data.lang['mycv'].vn %}
                 {% assign abt-note = site.data.lang['mynote'].vn %}
               {% endif %}      
-              <a target="_blank" href="{{site.data.setting.author.cv}}" class="btn btn-primary btn-warning mt-3 font-weight-bold" role="button" style="color: #80357c;">{{abt-cv}}</a>
-              <a target="_blank" href="{{site.data.setting.author.mynote.url}}" class="btn btn-primary btn-success mt-3 font-weight-bold" role="button">{{ abt-note }}</a>
+              <a target="_blank" href="{{site.author.cv}}" class="btn btn-primary btn-warning mt-3 font-weight-bold" role="button" style="color: #80357c;">{{abt-cv}}</a>
+              <a target="_blank" href="{{site.author.mynote.url}}" class="btn btn-primary btn-success mt-3 font-weight-bold" role="button">{{ abt-note }}</a>
             {% endif %}
           </div>
         </div>
@@ -115,15 +115,15 @@
         <div class="row align-items-center">
           <div class="col-md-4 offset-md-1">
             <div class="img-avatar">
-              <img alt="Thi's avatar" src="{{site.baseurl}}{{site.data.setting.author.avatar}}">
+              <img alt="Thi's avatar" src="{{site.baseurl}}{{site.author.avatar}}">
             </div>
           </div>
           <div class="col-md-6 text-center idx-abt">
-            <h1>{{ site.data.setting.author.name }}</h1>
+            <h1>{{ site.author.name }}</h1>
             <p>{{ idx-intro }}</p>
             <p class="idx-social">
               <a class="mr-s" href="{{site.baseurl}}/about"><i class="fa fa-heart"></i> {{ idx-abt }}</a>
-              <a class="mr-s" target="_blank" href="{{site.baseurl}}{{site.data.setting.author.cv}}"><i class="fa fa-user" aria-hidden="true"></i> {{ idx-cv }}</a>
+              <a class="mr-s" target="_blank" href="{{site.baseurl}}{{site.author.cv}}"><i class="fa fa-user" aria-hidden="true"></i> {{ idx-cv }}</a>
               {% if site.data.setting.lang.current == 'en' %}
                 <a href="{{ site.data.setting.lang.other_url }}">
                   <i class="fa fa-globe"></i>

@@ -11,7 +11,12 @@ author:
   facebook: math2it
   email: dinhanhthimail@gmail.com
   avatar: /img/user.png
-  ncb: 10 # number of challenge books
+  cv: /files/mycv.pdf
+  mynote:
+    url: https://mynote.dinhanhthi.com
+    text: <span>mynote</span>.dinhanhthi.com
+    description: I write this NoteTheme theme for noting all of what I have studied.
+    img: /img/mynote.png
 
 
 # Build settings
