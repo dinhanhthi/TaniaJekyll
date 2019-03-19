@@ -5,6 +5,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 title-separator: "-"
 
+<<<<<<< HEAD
 author:
   name: TaniaJekyll
   github: dinhanhthi
@@ -19,6 +20,8 @@ author:
     img: /img/mynote.png
 
 
+=======
+>>>>>>> parent of 8a522e5... test fix deploy
 # Build settings
 timezone: "Europe/Paris"
 markdown: kramdown
