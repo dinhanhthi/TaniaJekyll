@@ -3,6 +3,7 @@ favicon: /img/favicon.ico
 
 # Author's information
 author:
+  avatar: /img/avatar.png
   cv: /files/mycv.pdf
   mynote:
     url: https://mynote.dinhanhthi.com
