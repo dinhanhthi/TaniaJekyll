@@ -3,11 +3,6 @@ favicon: /img/favicon.ico
 
 # Author's information
 author:
-  name: TaniaJekyll
-  github: dinhanhthi
-  facebook: math2it
-  email: dinhanhthi@gmail.com
-  avatar: /img/avatar.png
   cv: /files/mycv.pdf
   mynote:
     url: https://mynote.dinhanhthi.com
