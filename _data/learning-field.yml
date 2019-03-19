@@ -6,17 +6,11 @@
   icon: fa-graduation-cap
   detail:
     - date: 2005 - 2008
-      activity: Student of Ben Tre high school for gifted students.
-      more: I learned about advanced Math on high school.
+      activity: 
+      more: 
     - date: 2008 - 2012
-      activity: Student of Department of Mathematics , HCM City University of Pedagogy.
-      more: "I learned a lot of Maths topics and how to become a Maths teacher."
-    - date: 2012 - 2014
-      activity: Student of France-Vietnam Master 2 program.
-      more: I studied 6 subjects with different fields (including Numerical Analysis, Statistics, PDE,…). At the end of the program, I took an internship at U.Paris 13.
-    - date: 2014 - 2018
-      activity: Ph.D. student at University Paris 13.
-      more: I keep working on the biofilm’s life with a higher level. I used Finite Element Method coupling with FreeFem++ and Matlab to simulate the life of biofilm. NXFEM toolbox was born at that time.
+      activity: 
+      more: 
 - id: phd
   img: phd-icon.svg
   color: "#f35d00"
@@ -25,40 +19,10 @@
   icon: fa-university
   detail:
     - date: 10 - 13/06/2014
-      activity: "Attending the biofilm summer school \"Models for bacterial biofilms formation : mathematical, physical and biological perspectives\" at Nice, France ."
-      more: I met many scientists who are working on biofilms topic and I discussed a lot with them.
-      link: http://math.unice.fr/~ribot/Biofilms/registration.php
-      link-des: Reference link
-    - date: 7 - 11/07/2014
-      activity: Attending the biology summer school at Luminy, Marseille, France.
-      more: I had a chance to learn about biology from the fundamental. It helps me much on my research topic.
-      link: http://www.i2m.univ-amu.fr/florence.hubert/?q=EÈBL014
-      link-des: Reference link
-    - date: 13 - 17/10/2014
-      activity: "Attending the 11th \"Semaine d’Étude Maths-Entreprises\" at Rouen, France."
-      more: "Working on the topic \"Schéma numérique pour la récupération assistée du pétrole par des procédés chimiques\" proposed by IFPEN."
-      link: http://lmrs.univ-rouen.fr/SEME/
-      link-des: Reference link
-    - date: 12 - 13/10/2015
-      activity: "Attending the workshop \"Workshop sur la modélisation de biofilms\" at Rouen, France."
-      more: "My talk’s topic \"Simulation de la croissance d’un biofilm\""
-      link: http://lmrs.univ-rouen.fr/Biofilms/intervenants.html
-      link-des: Reference link
-    - date: 15 - 16/12/2015
-      activity: "Attending the seventh workshop on Generic Solvers for PDEs: FreeFem++ and its Applications at University Paris 6, France."
-      more: "My talk's topic \"Simulating some interface problems with FreeFem++.\""
-      link: https://www.ljll.math.upmc.fr/hecht/ftp/ff++days/2015/Schedule.html
-      link-des: Reference link
-    - date: 25/01/2016
-      activity: "Attending the third meeting about Maths, Biology and Medicine of Université Sorbonne Paris Cité at University Paris 13, France."
-      more: "My talk's topic \"Finite element approximation of the biofilm growth model\"."
-      link: http://mathbio2016spc.sciencesconf.org/
-      link-des: Reference link
-    - date: 11 - 16/12/2016
-      activity: "Attending the anniversary conference of \"10 years of French-Vietnamese master in applied mathematics\" at Quy Nhon, Binh Dinh, Vietnam."
-      more: This is a chance for students who have learned or want to know more about this program to discuss with each other.
-      link: https://indico.math.cnrs.fr/event/1301/overview
-      link-des: Reference link
+      activity: 
+      more: 
+      link:
+      link-des:
 - id: web-development
   img: web-dev-icon.svg
   color: "#008b8b"
@@ -67,20 +31,10 @@
   icon: fa-globe
   detail:
     - date: 2012
-      activity: Self-studying about Web-development (HTML, CSS, DOM, JS, PHP & MySQL, HTTP Live Streaming)
-      more: "I have started to learn all of them from the beginning since the project \"Distance learning applying HTTP Live Streaming technology on Windows platform\". It's my bachelor's graduation thesis."
-      link: /files/dayhoctuxa.pdf
-      link-des: My thesis in Vietnamese
-    - date: 2013 - 2014
-      activity: Blogger & Web master.
-      more: "I created Math2IT under Blogger platform and was building up my knowledge about web development."
-      link: /project/math2it
-      link-des: Math2IT's project
-    - date: 2014 - today
-      activity: Wordpress & Jekyll.
-      more: "Website Math2IT was rewritten in Wordpress. I also started to learn about Jekyll and designed by myself NoteTheme and TaniaJekyll templates."
-      link: /project
-      link-des: My projects
+      activity: 
+      more: 
+      link: 
+      link-des: 
 - id: data
   img: data-icon.svg
   color: "#ed143d"
@@ -89,12 +43,7 @@
   icon: fa-database
   detail:
     - date: 2017 - present
-      activity: Learning Python.
-      more: I have finished some online courses (CS50, Datacamp, Dataquest), Corey Schafer's tutorials and keep learning for the upper levels.
-      link: https://note.dinhanhthi.com/tags#python
-      link-des: My Python notes
-    - date: 2018 - present
-      activity: Learning Data Science and Machine Learning.
-      more: "I am following courses: ML of Andrew Ng, Data Scientist path on Dataquest and reading book \"An introduction to Statistics Learning\" by Gareth James et al."
-      link: https://note.dinhanhthi.com/categories#data
-      link-des: My notes
+      activity: 
+      more:
+      link: 
+      link-des: 
