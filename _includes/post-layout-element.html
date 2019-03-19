@@ -1,7 +1,7 @@
 <div class="{{ class-col }}">
   <div class="{{ class-main }} layout-main">
     {% if element.url %}
-      <a href="{{ element.url }}">
+      <a href="{{site.baseurl}}{{ element.url }}">
 
         {% assign submitDate = site.time | date: '%s' %}
         {% assign postDate = element.date | date: '%s' %}

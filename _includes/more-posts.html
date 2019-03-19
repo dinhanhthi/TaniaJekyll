@@ -1,4 +1,4 @@
-{% if site.lang.current == "en" %}
+{% if site.data.setting.lang.current == "en" %}
   {% assign more_title = site.data.lang['more_post'].title.en %}
   {% assign more_reading = site.data.lang['section'].reading.more.en %}
   {% assign more_thought = site.data.lang['section'].thought.more.en %}
@@ -158,7 +158,7 @@
         document.write(
           '<div class="' + class_col + '">' +
             '<div class="' + class_main + ' layout-main">' +
-              '<a href="' + uurl + '">' +
+              '<a href="{{site.baseurl}}' + uurl + '">' +
                 uupdate +
                 '<div class="element-photo ' + class_photo + '">' +
                   '<img src="' + img_src + '/' + iimg + '"/>' +

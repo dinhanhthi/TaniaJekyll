@@ -1,8 +1,8 @@
-{%- if site.data.setting.disqus -%}
+{% if site.data.setting.disqus %}
     <div class="comments">
         <div id="disqus_thread"></div>
         <script type="text/javascript">
-            var disqus_shortname = '{{ site.disqus }}';
+            var disqus_shortname = '{{ site.data.setting.disqus }}';
             /* ensure that pages with query string get the same discussion */
                 var url_parts = window.location.href.split("?");
                 var disqus_url = url_parts[0];
@@ -12,6 +12,6 @@
                 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
             })();
         </script>
-        <noscript>Vui lòng bật javascrip để thấy <a href="http://disqus.com/?ref_noscript">bình luận trên hệ thống Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to see <a href="http://disqus.com/?ref_noscript">comments on Disqus system.</a></noscript>
     </div>
-{%- endif -%}
+{% endif %}

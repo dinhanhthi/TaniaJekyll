@@ -65,7 +65,7 @@ js:
 <!-- projects -->
 <section id="idx-project" class="alt-color section">
   <div class="container mb-4">
-    {% include sec-title.html title="Recent projects" href="project" more="see others" %}
+    {% include sec-title.html title="Recent projects" href="/project" more="see others" %}
     <div class="row justify-content-center">
       {% assign element-source = site.data.project %}
       {% include post-layout.html type="project" img-src="/img/project" source=element-source offset=0 limit=4 %}
@@ -83,7 +83,7 @@ js:
       {% assign counter = 0 %}
       {% for post in site.categories.reading %}
         {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
-          {% if year == "2018" %}
+          {% if year == site.data.setting.ncb-year %}
             {% assign counter = counter | plus: 1 %}
           {% endif %}
       {% endfor %}
@@ -97,7 +97,7 @@ js:
             <div class="col-12 col-md-10" style="margin-bottom: 2rem;">
               <div class="progress" style="height: 40px;">
                 <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning px-3" role="progressbar" aria-valuenow="{{ percentage }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percentage }}%">
-                  <span>{{ read_book }} / {{ total_book }} books in 2018</span>
+                  <span>{{ read_book }} / {{ total_book }} books in {{site.data.setting.ncb-year}}</span>
                 </div>
               </div>
             </div>
@@ -124,7 +124,7 @@ js:
 <!-- thought -->
 <section id="idx-tutorial" class="alt-color section">
   <div class="container mb-5">
-    {% include sec-title.html title="My thought" href="/thought" more="see full list" %}
+    {% include sec-title.html title="My thought 1" href="/thought" more="see full list" %}
     <div class="row row-eq-height justify-content-center">
       {% assign element-source = site.categories.thought %}
       {% include post-layout.html type="thought" source=element-source offset=0 limit=6 %}
@@ -135,10 +135,10 @@ js:
 <!-- thought2 -->
 <section id="idx-tutorial" class="alt-color section">
   <div class="container mb-5">
-    {% include sec-title.html title="My thought" href="/thought" more="see full list" %}
+    {% include sec-title.html title="My thought 2" href="/thought" more="see full list" %}
     <div class="row row-eq-height justify-content-center">
       {% assign element-source = site.categories.thought %}
-      {% include post-layout.html type="thought2" source=element-source offset=0 img-src="/img/thought" limit=6 %}
+      {% include post-layout.html type="thought2" source=element-source offset=0 img-src="/img/thought" limit=4 %}
     </div>
   </div>
 </section>

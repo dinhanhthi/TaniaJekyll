@@ -17,6 +17,7 @@ author:
 
 # number of challenge books
 ncb: 10
+ncb-year: "2018"
 
 # site's language
 lang:
