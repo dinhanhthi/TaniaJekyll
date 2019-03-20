@@ -129,11 +129,11 @@ There are a lot of ways you can insert an image in a post. I imitate the idea of
 
 A full-width image
 
-{% include img/full.html src="/img/post/thought/palais.jpg" des="An description of the image." %}
+{% include img/full.html src="/img/post/thought/palais.jpg" des="A description of the image." %}
 
 Or images can be float to the left or the right of the post,
 
-{% include img/right.html src="/img/post/thought/nghichden.jpg" des="An description of the image." %}
+{% include img/right.html src="/img/post/thought/nghichden.jpg" des="A description of the image." %}
 
 This is an example of paragraph to see the effect of the image floating to the side of post. It has no meaning, please not to understand it. This is an example of paragraph to see the effect of the image floating to the side of post. It has no meaning, please not to understand it. This is an example of paragraph to see the effect of the image floating to the side of post. It has no meaning, please not to understand it. This is an example of paragraph to see the effect of the image floating to the side of post. It has no meaning, please not to understand it. This is an example of paragraph to see the effect of the image floating to the side of post. It has no meaning, please not to understand it. This is an example of paragraph to see the effect of the image floating to the side of post. It has no meaning, please not to understand it.
 
