@@ -20,11 +20,11 @@ A beautiful personal Jekyll theme with different layouts of posts designed by [D
 ## How to install TaniaJekyll?
 
 - Download from [Github repository](https://github.com/dinhanhthi/TaniaJekyll). Please change to branch **gh-pages** to see the whole code files.
-- Follow [this instruction](https://dinhanhthi.github.io/TaniaJekyll/how-to-install-taniajekyll "How to install TaniaJekyll") carefully. I show you from the beginning how to create a github page with jekyll and then apply TaniaJekyll and use it.
+- Follow [this instruction](https://dinhanhthi.github.io/TaniaJekyll/tutorial/how-to-install-taniajekyll "How to install TaniaJekyll") carefully. I show you from the beginning how to create a github page with jekyll and then apply TaniaJekyll and use it.
 
 ## How to use TaniaJekyll?
 
-- Follow [this instruction](https://dinhanhthi.github.io/TaniaJekyll/how-to-use-taniajekyll "How to useTaniaJekyll") carefully.
+- Follow [this instruction](https://dinhanhthi.github.io/TaniaJekyll/tutorial/how-to-use-taniajekyll "How to useTaniaJekyll") carefully.
 
 ## Contact & Support
  
