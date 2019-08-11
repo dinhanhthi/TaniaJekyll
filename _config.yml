@@ -1,15 +1,15 @@
-title: TaniaJekyll
-description: Beautiful personal Jekyll theme
-baseurl: "/TaniaJekyll" # the subpath of your site, e.g. /blog
+title: VLUCNTT - CLB Công Nghệ Thông Tin
+description: VLUCNTT - CLB Công Nghệ Thông Tin
+baseurl: "/blogs" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 title-separator: "-"
 
 author:
-  name: TaniaJekyll
-  github: dinhanhthi
-  facebook: math2it
-  email: dinhanhthi@gmail.com
+  name: VLUCNTT - CLB Công Nghệ Thông Tin
+  github: vlucntt
+  facebook: vlucntt
+  email: h3kfun@gmail.com
 
 
 # Build settings
