@@ -6,8 +6,8 @@ author:
   avatar: /img/avatar.png
   cv: /files/mycv.pdf
   mynote:
-    url: https://mynote.dinhanhthi.com
-    text: <span>mynote</span>.dinhanhthi.com
+    url: https://note.dinhanhthi.com
+    text: <span>note</span>.dinhanhthi.com
     description: I write this NoteTheme theme for noting all of what I have studied.
     img: /img/mynote.png
 
